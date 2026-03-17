@@ -1,0 +1,29 @@
+{
+  "name": "@puzzle-book/cli",
+  "version": "0.0.1",
+  "private": true,
+  "bin": {
+    "pbg": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@puzzle-book/shared": "*",
+    "@puzzle-book/puzzle-generator": "*",
+    "@puzzle-book/book-generator": "*",
+    "@puzzle-book/content-db": "*",
+    "yargs": "^17.7.2",
+    "archiver": "^7.0.1",
+    "csv-parse": "^5.5.6"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.33",
+    "@types/archiver": "^6.0.2",
+    "@types/node": "*",
+    "typescript": "*",
+    "tsx": "*"
+  }
+}

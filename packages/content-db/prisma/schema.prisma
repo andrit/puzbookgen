@@ -1,0 +1,153 @@
+// Prisma schema for the Puzzle Book Generator content database
+// Hosted on Supabase (PostgreSQL)
+//
+// This database is a long-term proprietary asset.
+// It stores the word/clue pairs that feed the Puzzle Generator.
+//
+// Connection string is read from DATABASE_URL in .env
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// Words
+// ---------------------------------------------------------------------------
+
+model Word {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  word      String   @unique
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // Relations
+  clues      Clue[]
+  themes     WordTheme[]
+  listEntries WordListEntry[]
+
+  // Computed: length is used frequently for grid placement queries
+  @@index([word])
+  @@map("words")
+}
+
+// ---------------------------------------------------------------------------
+// Clues
+// ---------------------------------------------------------------------------
+
+// A word can have multiple clues at different difficulty levels
+// or with different phrasings (variety is good for reuse across books)
+model Clue {
+  id         String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  wordId     String      @map("word_id") @db.Uuid
+  clueText   String      @map("clue_text")
+  difficulty Difficulty  @default(MEDIUM)
+  // Source tracks provenance: manual entry, AI-generated, imported
+  source     ClueSource  @default(MANUAL)
+  // Vetted clues have been reviewed by a human — preferred for publication
+  vetted     Boolean     @default(false)
+  createdAt  DateTime    @default(now()) @map("created_at")
+
+  // Relations
+  word        Word           @relation(fields: [wordId], references: [id], onDelete: Cascade)
+  listEntries WordListEntry[]
+
+  @@index([wordId])
+  @@index([difficulty])
+  @@index([vetted])
+  @@map("clues")
+}
+
+// ---------------------------------------------------------------------------
+// Themes
+// ---------------------------------------------------------------------------
+
+model Theme {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name        String   @unique
+  description String?
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  // Relations
+  wordThemes WordTheme[]
+  wordLists  WordList[]
+
+  @@map("themes")
+}
+
+// Word ↔ Theme (many-to-many)
+model WordTheme {
+  wordId  String @map("word_id") @db.Uuid
+  themeId String @map("theme_id") @db.Uuid
+
+  word  Word  @relation(fields: [wordId], references: [id], onDelete: Cascade)
+  theme Theme @relation(fields: [themeId], references: [id], onDelete: Cascade)
+
+  @@id([wordId, themeId])
+  @@map("word_themes")
+}
+
+// ---------------------------------------------------------------------------
+// Word Lists
+// ---------------------------------------------------------------------------
+
+// A WordList is a curated set of word/clue pairs used as input to the
+// Puzzle Generator. Lists can be theme-based or arbitrary.
+model WordList {
+  id          String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name        String
+  description String?
+  // Which puzzle type this list is intended for
+  // Extensibility: new puzzle types simply use a new puzzleType value
+  puzzleType  String      @default("crossword") @map("puzzle_type")
+  themeId     String?     @map("theme_id") @db.Uuid
+  createdAt   DateTime    @default(now()) @map("created_at")
+
+  // Relations
+  theme   Theme?          @relation(fields: [themeId], references: [id])
+  entries WordListEntry[]
+
+  @@index([puzzleType])
+  @@map("word_lists")
+}
+
+// WordList ↔ Clue (many-to-many)
+// Each entry associates a specific clue (and therefore its word) with a list
+model WordListEntry {
+  wordListId String @map("word_list_id") @db.Uuid
+  clueId     String @map("clue_id") @db.Uuid
+  wordId     String @map("word_id") @db.Uuid
+  // Display order within the list (optional, for curated ordering)
+  sortOrder  Int?   @map("sort_order")
+
+  wordList WordList @relation(fields: [wordListId], references: [id], onDelete: Cascade)
+  clue     Clue     @relation(fields: [clueId], references: [id], onDelete: Cascade)
+  word     Word     @relation(fields: [wordId], references: [id], onDelete: Cascade)
+
+  @@id([wordListId, clueId])
+  @@index([wordListId])
+  @@map("word_list_entries")
+}
+
+// ---------------------------------------------------------------------------
+// Enums
+// ---------------------------------------------------------------------------
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+
+  @@map("difficulty")
+}
+
+enum ClueSource {
+  MANUAL      // Hand-written by creator
+  AI_GENERATED // Generated via AI API, pending human review
+  IMPORTED    // Bulk-imported from CSV/JSON
+
+  @@map("clue_source")
+}

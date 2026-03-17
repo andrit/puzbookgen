@@ -1,0 +1,36 @@
+{
+  "name": "puzzle-book-generator",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Puzzle book publishing platform \u2014 crossword books for print and screen",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=packages/shared && npm run build --workspace=packages/puzzle-generator && npm run build --workspace=packages/book-generator && npm run build --workspace=packages/content-db && npm run build --workspace=apps/cli && npm run build --workspace=apps/web",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:cli": "npm run dev --workspace=apps/cli",
+    "test": "vitest run --reporter=verbose",
+    "lint": "npm run lint --workspaces --if-present",
+    "clean": "npm run clean --workspaces --if-present && rm -rf node_modules",
+    "db:generate": "npm run db:generate --workspace=packages/content-db",
+    "db:migrate": "npm run db:migrate --workspace=packages/content-db",
+    "db:seed": "npm run db:seed --workspace=packages/content-db",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "tsx": "^4.15.0",
+    "prettier": "^3.3.0",
+    "eslint": "^9.0.0",
+    "vitest": "^1.6.0",
+    "@vitest/coverage-v8": "^1.6.0"
+  }
+}

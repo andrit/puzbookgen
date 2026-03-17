@@ -1,0 +1,24 @@
+{
+  "id": "kdp-8x10-bw",
+  "name": "Amazon KDP 8x10 Black & White",
+  "outputType": "print",
+  "dimensions": {
+    "width": 8,
+    "height": 10,
+    "unit": "inches",
+    "bleed": 0.125
+  },
+  "margins": {
+    "top": 0.75,
+    "bottom": 0.75,
+    "inside": 0.875,
+    "outside": 0.625,
+    "unit": "inches"
+  },
+  "color": "bw",
+  "resolution": 300,
+  "cropMarks": true,
+  "fonts": {
+    "embed": true
+  }
+}
