@@ -7,7 +7,7 @@ import type {
   Cell,
   Clue,
 } from '@puzzle-book/shared'
-import { getContentArea, inchesToPoints } from '../renderers/target-loader'
+import { getContentArea, inchesToPoints } from '../../renderers/target-loader'
 
 /**
  * CrosswordTemplate
