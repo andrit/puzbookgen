@@ -132,7 +132,7 @@ export async function handler(argv: GenerateBookArgs): Promise<void> {
       } else {
         console.log(`✅ ${puzzle.metadata.wordCount} words placed`)
         if (validation.warnings.length > 0) {
-          validation.warnings.forEach((w) => console.log(`      ⚠️  ${w}`))
+          validation.warnings.forEach((w: string) => console.log(`      ⚠️  ${w}`))
         }
       }
 

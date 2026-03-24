@@ -257,6 +257,66 @@ export const buildGrid = (
   cells: Array.from(numberedCellMap.values()),
 })
 
+
+// ---------------------------------------------------------------------------
+// Step 7b — Trim empty border rows and columns
+// ---------------------------------------------------------------------------
+
+/**
+ * Removes all-blocked rows and columns from the edges of the grid.
+ *
+ * The layout library returns a bounding-box grid padded with empty rows/cols
+ * around the placed words. This produces large black borders in the rendered
+ * output. Trimming reduces the grid to the tightest bounding box of letter cells.
+ *
+ * Returns a new cell map and the trimmed dimensions. Does not mutate inputs.
+ *
+ * @pure
+ */
+export const trimGrid = (
+  cellMap: Map<CellKey, Cell>,
+  width: number,
+  height: number
+): { trimmedMap: Map<CellKey, Cell>; trimmedWidth: number; trimmedHeight: number } => {
+  // Find the bounding box of all letter cells
+  let minRow = height, maxRow = 0, minCol = width, maxCol = 0
+
+  for (const cell of cellMap.values()) {
+    if (cell.type === 'letter') {
+      minRow = Math.min(minRow, cell.row)
+      maxRow = Math.max(maxRow, cell.row)
+      minCol = Math.min(minCol, cell.col)
+      maxCol = Math.max(maxCol, cell.col)
+    }
+  }
+
+  // If no letter cells found, return original unchanged
+  if (minRow > maxRow || minCol > maxCol) {
+    return { trimmedMap: cellMap, trimmedWidth: width, trimmedHeight: height }
+  }
+
+  const trimmedWidth = maxCol - minCol + 1
+  const trimmedHeight = maxRow - minRow + 1
+  const trimmedMap = new Map<CellKey, Cell>()
+
+  for (let row = minRow; row <= maxRow; row++) {
+    for (let col = minCol; col <= maxCol; col++) {
+      const cell = cellMap.get(`${row},${col}`)
+      const newRow = row - minRow
+      const newCol = col - minCol
+      const newKey = `${newRow},${newCol}`
+
+      if (cell) {
+        trimmedMap.set(newKey, { ...cell, row: newRow, col: newCol })
+      } else {
+        trimmedMap.set(newKey, { row: newRow, col: newCol, type: 'blocked', number: null, solution: null })
+      }
+    }
+  }
+
+  return { trimmedMap, trimmedWidth, trimmedHeight }
+}
+
 // ---------------------------------------------------------------------------
 // Composition — full pipeline as a single pure function
 // ---------------------------------------------------------------------------
@@ -288,8 +348,11 @@ export const buildCrosswordGridAndClues = (
     height
   )
 
+  // Trim empty border rows/columns produced by the layout library
+  const { trimmedMap, trimmedWidth, trimmedHeight } = trimGrid(numberedCellMap, width, height)
+
   return {
-    grid: buildGrid(numberedCellMap, width, height),
+    grid: buildGrid(trimmedMap, trimmedWidth, trimmedHeight),
     clues: buildClueArrays(placedWords, numberMap),
   }
 }

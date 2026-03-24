@@ -13,7 +13,14 @@
     "declarationMap": true,
     "sourceMap": true,
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@puzzle-book/shared": ["packages/shared/dist/index"],
+      "@puzzle-book/puzzle-generator": ["packages/puzzle-generator/dist/index"],
+      "@puzzle-book/book-generator": ["packages/book-generator/dist/index"],
+      "@puzzle-book/content-db": ["packages/content-db/dist/index"]
+    }
   },
   "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }

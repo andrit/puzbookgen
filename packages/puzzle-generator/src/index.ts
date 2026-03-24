@@ -16,6 +16,7 @@ export {
   buildClueArrays,
   buildGrid,
   buildCrosswordGridAndClues,
+  trimGrid,
 } from './crossword/crossword.functions'
 
 export type {

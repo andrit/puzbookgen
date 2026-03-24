@@ -2,7 +2,10 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "server",
-    "outDir": "dist/server"
+    "outDir": "dist/server",
+    "baseUrl": "../.."
   },
-  "include": ["server"]
+  "include": [
+    "server"
+  ]
 }

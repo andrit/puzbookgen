@@ -3,7 +3,13 @@ import { resolve } from 'path'
 import { wordRepository } from '@puzzle-book/content-db'
 import { readFileSync } from 'fs'
 import { parse } from 'csv-parse/sync'
-import type { Difficulty } from '@prisma/client'
+
+/**
+ * Prisma enum values for Difficulty.
+ * Defined locally to avoid a hard dependency on @prisma/client types
+ * in the CLI layer — those types only exist after `prisma generate` runs.
+ */
+type PrismaDifficulty = 'EASY' | 'MEDIUM' | 'HARD'
 
 export interface ImportWordsArgs {
   file: string
@@ -49,7 +55,7 @@ export async function handler(argv: ImportWordsArgs): Promise<void> {
   const entries = rows.map((r) => ({
     word: r.word,
     clueText: r.clue,
-    difficulty: (r.difficulty?.toUpperCase() as Difficulty) ?? 'MEDIUM',
+    difficulty: (r.difficulty?.toUpperCase() as PrismaDifficulty) ?? 'MEDIUM',
     vetted: argv.vetted,
   }))
 
@@ -61,6 +67,6 @@ export async function handler(argv: ImportWordsArgs): Promise<void> {
 
   if (result.errors.length > 0) {
     console.warn(`\n⚠️  Errors (${result.errors.length}):`)
-    result.errors.slice(0, 5).forEach((e) => console.warn(`   ${e}`))
+    result.errors.slice(0, 5).forEach((e: string) => console.warn(`   ${e}`))
   }
 }
