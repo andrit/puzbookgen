@@ -8,6 +8,7 @@ import type {
   Clue,
 } from '@puzzle-book/shared'
 import { getContentArea } from '../../renderers/target-loader'
+import { getCover, DEFAULT_COVER_ID } from './covers/cover.registry'
 
 // ---------------------------------------------------------------------------
 // Typography constants
@@ -29,10 +30,21 @@ export class CrosswordTemplate implements IBookTemplate {
   readonly puzzleType  = 'crossword' as const
   readonly templateName = 'standard'
 
+  /** Cover design ID — resolved via cover.registry.ts */
+  private coverId: string = DEFAULT_COVER_ID
+
   private doc!: InstanceType<typeof PDFDocument>
 
   setDocument(doc: InstanceType<typeof PDFDocument>): void {
     this.doc = doc
+  }
+
+  /**
+   * Set the cover design to use for this book.
+   * Call before renderCover(). Defaults to DEFAULT_COVER_ID.
+   */
+  setCoverId(id: string): void {
+    this.coverId = id
   }
 
   // ---------------------------------------------------------------------------
@@ -40,93 +52,12 @@ export class CrosswordTemplate implements IBookTemplate {
   // ---------------------------------------------------------------------------
 
   renderCover(book: Book, _options: RenderOptions): void {
-    const pw = this.doc.page.width
-    const ph = this.doc.page.height
-    const cx = pw / 2
-
-    // Dark background
-    this.doc.rect(0, 0, pw, ph).fill('#1C1C2E')
-
-    // Double gold border
-    const bO = 18, bI = 27
-    this.doc.rect(bO, bO, pw - bO*2, ph - bO*2).lineWidth(2).strokeColor('#C9A84C').stroke()
-    this.doc.rect(bI, bI, pw - bI*2, ph - bI*2).lineWidth(0.5).strokeColor('#C9A84C').stroke()
-
-    // Diamond corner ornaments
-    for (const c of [{ x:bO, y:bO },{ x:pw-bO, y:bO },{ x:bO, y:ph-bO },{ x:pw-bO, y:ph-bO }]) {
-      const s = 6
-      this.doc.moveTo(c.x,c.y-s).lineTo(c.x+s,c.y).lineTo(c.x,c.y+s).lineTo(c.x-s,c.y).closePath().fill('#C9A84C')
-    }
-
-    // Crossword square bands — top and bottom (deterministic pattern)
-    const sq = 9, sqG = 1
-    const sqN = Math.floor((pw - 80) / (sq + sqG))
-    const sqX0 = (pw - sqN * (sq + sqG)) / 2
-    const pat = [1,0,0,1,0,1,0,0,1,1,0,1,0,0,0,1,0,1,1,0]
-    for (let i = 0; i < sqN; i++) {
-      const sx = sqX0 + i * (sq + sqG)
-      const filled = pat[i % pat.length] === 1
-      if (filled) {
-        this.doc.rect(sx, 50, sq, sq).fill('#C9A84C')
-        this.doc.rect(sx, ph-50-sq, sq, sq).fill('#C9A84C')
-      } else {
-        this.doc.rect(sx, 50, sq, sq).lineWidth(0.4).strokeColor('#C9A84C').stroke()
-        this.doc.rect(sx, ph-50-sq, sq, sq).lineWidth(0.4).strokeColor('#C9A84C').stroke()
-      }
-    }
-
-    // Magnifying glass
-    const mgCY = ph * 0.345, mgR = 38
-    this.doc.circle(cx, mgCY, mgR).lineWidth(4.5).strokeColor('#C9A84C').stroke()
-    const hx1 = cx + mgR*0.68, hy1 = mgCY + mgR*0.68
-    this.doc.moveTo(hx1, hy1).lineTo(hx1+mgR*0.8, hy1+mgR*0.8).lineWidth(5.5).lineCap('round').strokeColor('#C9A84C').stroke()
-    this.doc.fillOpacity(0.2).circle(cx-mgR*0.28, mgCY-mgR*0.28, mgR*0.14).fill('#F5E6C8')
-    this.doc.fillOpacity(1)
-    this.doc.font('Times-Bold').fontSize(34).fillColor('#C9A84C').text('?', cx-11, mgCY-21, { lineBreak: false })
-
-    // Content block — work top-down from a fixed start Y
-    const contentX = bI + 14
-    const contentW = pw - (bI + 14) * 2
-
-    // Decorative rule
-    const ruleY = ph * 0.555
-    this.doc.moveTo(bI+24, ruleY).lineTo(pw-bI-24, ruleY).lineWidth(0.75).strokeColor('#C9A84C').stroke()
-
-    // Title — shrink font size until it fits on one line
-    const titleRaw = book.metadata.title.toUpperCase()
-    let titleSize = 28
-    while (titleSize > 14) {
-      this.doc.font('Times-Bold').fontSize(titleSize)
-      if (this.doc.widthOfString(titleRaw) <= contentW) break
-      titleSize -= 1
-    }
-    const titleY = ruleY + 11
-    this.doc.font('Times-Bold').fontSize(titleSize).fillColor('#F5E6C8')
-      .text(titleRaw, contentX, titleY, { width: contentW, align: 'center', lineBreak: false })
-
-    let nextY = titleY + titleSize + 10
-
-    // Subtitle
-    if (book.metadata.subtitle) {
-      this.doc.font('Times-Roman').fontSize(12).fillColor('#C9A84C')
-        .text(book.metadata.subtitle, contentX, nextY, { width: contentW, align: 'center', lineBreak: false })
-      nextY += 20
-    }
-
-    // Puzzle count
-    const n = book.puzzles.length
-    this.doc.font('Helvetica').fontSize(9.5).fillColor('#C9A84C')
-      .text(`${n} Crossword Puzzle${n !== 1 ? 's' : ''}`, contentX, nextY, { width: contentW, align: 'center', lineBreak: false })
-    nextY += 16
-
-    // Lower rule
-    this.doc.moveTo(bI+24, nextY).lineTo(pw-bI-24, nextY).lineWidth(0.75).strokeColor('#C9A84C').stroke()
-
-    // Author
-    if (book.metadata.author) {
-      this.doc.font('Times-Italic').fontSize(11).fillColor('#C9A84C')
-        .text(book.metadata.author, contentX, ph - bI - 46, { width: contentW, align: 'center', lineBreak: false })
-    }
+    getCover(this.coverId).render(
+      this.doc,
+      book,
+      this.doc.page.width,
+      this.doc.page.height
+    )
   }
 
   // ---------------------------------------------------------------------------

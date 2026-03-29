@@ -8,6 +8,8 @@ export interface AssemblerOptions {
   content?: Partial<Omit<BookContent, 'chapters'>>
   printTarget?: string
   screenTarget?: string
+  /** Cover design ID — see cover.registry.ts */
+  coverId?: string
 }
 
 /**
@@ -53,7 +55,8 @@ export class BookAssembler {
         typography: options.layout?.typography ?? {},
         gridStyle: options.layout?.gridStyle ?? {},
         pageDecorations: options.layout?.pageDecorations ?? {},
-      },
+        ...(options.coverId ? { coverId: options.coverId } : {}),
+      } as any,
       content: {
         cover: {
           title: options.metadata.title,

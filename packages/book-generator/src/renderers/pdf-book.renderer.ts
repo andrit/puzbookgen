@@ -28,8 +28,7 @@ import { CrosswordTemplate } from '../templates/crossword/crossword.template'
  * @param puzzleType - The puzzle type discriminator from the Book aggregate
  * @returns A configured template instance ready to receive a PDFKit document
  */
-const resolveTemplate = (puzzleType: string): CrosswordTemplate => {
-  // Template registry — extend when new puzzle types are added
+const resolveTemplate = (puzzleType: string, coverId?: string): CrosswordTemplate => {
   const registry: Record<string, () => CrosswordTemplate> = {
     crossword: () => new CrosswordTemplate(),
   }
@@ -41,7 +40,9 @@ const resolveTemplate = (puzzleType: string): CrosswordTemplate => {
         `Register one in resolveTemplate() in pdf-book.renderer.ts`
     )
   }
-  return factory()
+  const template = factory()
+  if (coverId) template.setCoverId(coverId)
+  return template
 }
 
 // ---------------------------------------------------------------------------
@@ -99,7 +100,8 @@ export class PdfBookRenderer extends BasePdfRenderer implements IRenderer {
   async render(book: Book, options: RenderOptions): Promise<Buffer> {
     this.initDocument(options.target)
 
-    const template = resolveTemplate(book.puzzleType)
+    const coverId = (book.layout as any).coverId
+    const template = resolveTemplate(book.puzzleType, coverId)
     template.setDocument(this.doc)
 
     // Cover

@@ -18,6 +18,7 @@ export interface GenerateBookArgs {
   'screen-target': string
   'min-words': number
   'max-words': number
+  cover: string
 }
 
 export const command = 'generate-book'
@@ -79,6 +80,12 @@ export function builder(yargs: Argv): Argv<GenerateBookArgs> {
       type: 'number',
       description: 'Maximum words per puzzle',
       default: 25,
+    })
+    .option('cover', {
+      type: 'string',
+      description: 'Cover design ID (silhouette, crossword-title)',
+      default: 'silhouette',
+      choices: ['silhouette', 'crossword-title'],
     }) as Argv<GenerateBookArgs>
 }
 
@@ -161,6 +168,7 @@ export async function handler(argv: GenerateBookArgs): Promise<void> {
     },
     printTarget: argv['print-target'],
     screenTarget: argv['screen-target'],
+    coverId: argv.cover,
   })
   console.log(`   ✅ Book assembled: "${book.metadata.title}"`)
 
