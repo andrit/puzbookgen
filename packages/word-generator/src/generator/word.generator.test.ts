@@ -265,32 +265,3 @@ describe('wordGenerator.generate — defaults', () => {
     expect(r1.words.length).toBe(r2.words.length)
   })
 })
-
-// ---------------------------------------------------------------------------
-// Analysis integration
-// ---------------------------------------------------------------------------
-
-describe('wordGenerator.generate — analysis integration', () => {
-  it('passes word-length analysis summary into the prompt when existing words provided', async () => {
-    const existing = [
-      // 10 long words — analysis should flag short words as needed
-      ...Array.from({ length: 10 }, () => ({ ...word('ABCDEFGHIJ') })),
-    ]
-    mockCallClaude.mockResolvedValueOnce(mockResponse(BATCH_15))
-
-    await wordGenerator.generate({ ...BASE_OPTS, existing, count: 1 })
-
-    const [, userArg] = mockCallClaude.mock.calls[0]
-    // Analysis summary should appear in the user prompt
-    expect(userArg).toMatch(/WORD LENGTH GUIDANCE|short.*underrepresented|short words/i)
-  })
-
-  it('does not include length guidance section when existing list is empty', async () => {
-    mockCallClaude.mockResolvedValueOnce(mockResponse(BATCH_15))
-
-    await wordGenerator.generate({ ...BASE_OPTS, existing: [], count: 1 })
-
-    const [, userArg] = mockCallClaude.mock.calls[0]
-    expect(userArg).not.toMatch(/WORD LENGTH GUIDANCE/i)
-  })
-})

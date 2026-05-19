@@ -20,7 +20,6 @@ import { buildPrompt }    from '../prompt/prompt.builder'
 import { callClaude }     from '../api/claude.client'
 import { parseResponse }  from '../parser/response.parser'
 import { deduplicate }    from '../dedup/deduplicator'
-import { analyzeWordList } from '../csv/csv.writer'
 import type {
   GeneratorOptions,
   GeneratorResult,
@@ -58,11 +57,7 @@ async function generate(
     existing    = [],
   } = opts
 
-  // Analyse the existing list so buildPrompt can tailor the length mix.
-  // Only pass analysis when there are existing words — an empty list produces
-  // the default mix which is already encoded in the system prompt.
-  const analysis = existing.length > 0 ? analyzeWordList(existing) : undefined
-  const { system, user } = buildPrompt({ theme, seeds, count, maxRetries, apiKey }, analysis)
+  const { system, user } = buildPrompt({ theme, seeds, count, maxRetries, apiKey })
 
   const accumulated: GeneratedWord[] = []
   let apiCallCount = 0
