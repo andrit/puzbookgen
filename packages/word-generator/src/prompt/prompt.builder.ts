@@ -14,7 +14,7 @@
  * making it easy to test and audit.
  */
 
-import type { GeneratorOptions } from '../types'
+import type { GeneratorOptions, WordListAnalysis } from '../types'
 import {
   MIN_WORD_LENGTH,
   MAX_WORD_LENGTH,
@@ -111,7 +111,10 @@ Mix target across the full output:
  * The returned strings map to the Claude API's `system` parameter and
  * `messages[0].content`.
  */
-export function buildPrompt(opts: GeneratorOptions): { system: string; user: string } {
+export function buildPrompt(
+  opts: GeneratorOptions,
+  analysis?: WordListAnalysis
+): { system: string; user: string } {
   const { theme, seeds = [], count } = opts
 
   // ── Seed section ───────────────────────────────────────────────────────────
@@ -121,10 +124,17 @@ required anchor words for this theme. Include them at the start of the array, \
 then continue with additional words:\n${seeds.map(s => `  ${s.toUpperCase()}`).join('\n')}\n`
     : ''
 
+  // ── Length guidance section ────────────────────────────────────────────────
+  // If an analysis was provided, replace the generic mix target with a
+  // data-driven instruction tailored to what the existing list needs.
+  const lengthSection = analysis
+    ? `\nWORD LENGTH GUIDANCE (based on existing list analysis):\n${analysis.summary}\n`
+    : ''
+
   // ── User message ───────────────────────────────────────────────────────────
   const user = `\
 Generate exactly ${count} word/clue pairs for the crossword theme: "${theme}".
-${seedSection}
+${seedSection}${lengthSection}
 Requirements:
   - All words must be strongly relevant to "${theme}"
   - Include a mix of core terminology, related concepts, key figures or places, \

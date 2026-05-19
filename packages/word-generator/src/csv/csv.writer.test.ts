@@ -223,3 +223,134 @@ function writeFileContent(path: string, content: string): void {
   const { writeFileSync } = require('fs')
   writeFileSync(path, content, 'utf-8')
 }
+
+// ---------------------------------------------------------------------------
+// analyzeWordList
+// ---------------------------------------------------------------------------
+
+import { analyzeWordList, toBucket } from './csv.writer'
+
+describe('toBucket', () => {
+  it('classifies 3-letter word as short', () => expect(toBucket(3)).toBe('short'))
+  it('classifies 5-letter word as short', () => expect(toBucket(5)).toBe('short'))
+  it('classifies 6-letter word as medium', () => expect(toBucket(6)).toBe('medium'))
+  it('classifies 9-letter word as medium', () => expect(toBucket(9)).toBe('medium'))
+  it('classifies 10-letter word as long', () => expect(toBucket(10)).toBe('long'))
+  it('classifies 15-letter word as long', () => expect(toBucket(15)).toBe('long'))
+})
+
+describe('analyzeWordList — empty list', () => {
+  it('returns zero counts for empty list', () => {
+    const r = analyzeWordList([])
+    expect(r.total).toBe(0)
+    expect(r.counts.short).toBe(0)
+    expect(r.counts.medium).toBe(0)
+    expect(r.counts.long).toBe(0)
+  })
+
+  it('returns ideal default targets for empty list', () => {
+    const r = analyzeWordList([])
+    expect(r.targets.short).toBeGreaterThan(0)
+    expect(r.targets.medium).toBeGreaterThan(0)
+    expect(r.targets.long).toBeGreaterThan(0)
+  })
+
+  it('targets sum to 1.0 for empty list', () => {
+    const r = analyzeWordList([])
+    const sum = r.targets.short + r.targets.medium + r.targets.long
+    expect(sum).toBeCloseTo(1.0, 1)
+  })
+
+  it('summary mentions no existing words', () => {
+    const r = analyzeWordList([])
+    expect(r.summary).toMatch(/No existing/i)
+  })
+})
+
+describe('analyzeWordList — counting', () => {
+  it('counts short words correctly', () => {
+    const words = [word('CAT'), word('DOG'), word('EAGLE')]
+    const r = analyzeWordList(words)
+    expect(r.counts.short).toBe(3)   // CAT=3, DOG=3, EAGLE=5
+    expect(r.total).toBe(3)
+  })
+
+  it('counts medium words correctly', () => {
+    const words = [word('COSMOS'), word('PLANET')]  // 6 letters each
+    const r = analyzeWordList(words)
+    expect(r.counts.medium).toBe(2)
+  })
+
+  it('counts long words correctly', () => {
+    const words = [word('HIEROGLYPH')]  // 10 letters
+    const r = analyzeWordList(words)
+    expect(r.counts.long).toBe(1)
+  })
+
+  it('computes correct fractions', () => {
+    // 1 short + 1 medium + 1 long = 33% each
+    const words = [word('CAT'), word('COSMOS'), word('HIEROGLYPH')]
+    const r = analyzeWordList(words)
+    expect(r.fractions.short).toBeCloseTo(1/3, 1)
+    expect(r.fractions.medium).toBeCloseTo(1/3, 1)
+    expect(r.fractions.long).toBeCloseTo(1/3, 1)
+  })
+})
+
+describe('analyzeWordList — targets', () => {
+  it('targets sum to approximately 1.0', () => {
+    const words = Array.from({ length: 20 }, (_, i) =>
+      word('WORD'.padEnd(6 + i % 8, 'X'))
+    )
+    const r = analyzeWordList(words)
+    const sum = r.targets.short + r.targets.medium + r.targets.long
+    expect(sum).toBeCloseTo(1.0, 1)
+  })
+
+  it('boosts short target when short words are underrepresented', () => {
+    // All long words — should heavily target short in the new batch
+    const allLong = Array.from({ length: 10 }, (_, i) =>
+      word('HIEROGLYPH'.slice(0, 10) + i)
+    )
+    const r = analyzeWordList(allLong.map(w => ({ ...w, word: 'ABCDEFGHIJ' })))
+    expect(r.targets.short).toBeGreaterThan(r.targets.long)
+  })
+
+  it('reduces short target when short words are over-represented', () => {
+    // All short words — should request fewer short in new batch
+    const allShort = Array.from({ length: 10 }, (_, i) =>
+      word(['CAT','DOG','BAT','HAT','MAT','RAT','SAT','FAT','PAT','VAT'][i])
+    )
+    const r = analyzeWordList(allShort)
+    // Short is already over-ideal — target for new batch should be lower than medium
+    expect(r.targets.short).toBeLessThan(r.targets.medium)
+  })
+
+  it('no bucket target is ever zero', () => {
+    const allLong = Array.from({ length: 10 }, () => ({ ...word('ABCDEFGHIJ') }))
+    const r = analyzeWordList(allLong)
+    expect(r.targets.short).toBeGreaterThan(0)
+    expect(r.targets.medium).toBeGreaterThan(0)
+    expect(r.targets.long).toBeGreaterThan(0)
+  })
+})
+
+describe('analyzeWordList — summary', () => {
+  it('summary includes word counts', () => {
+    const words = [word('CAT'), word('COSMOS'), word('HIEROGLYPH')]
+    const r = analyzeWordList(words)
+    expect(r.summary).toContain('3 words')
+  })
+
+  it('summary mentions short-word priority when short words are scarce', () => {
+    const allLong = Array.from({ length: 10 }, () => ({ ...word('ABCDEFGHIJ') }))
+    const r = analyzeWordList(allLong)
+    expect(r.summary).toMatch(/short words|short.*underrepresented/i)
+  })
+
+  it('summary is a non-empty string', () => {
+    const r = analyzeWordList([word('STAR')])
+    expect(typeof r.summary).toBe('string')
+    expect(r.summary.length).toBeGreaterThan(20)
+  })
+})

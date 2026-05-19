@@ -79,6 +79,52 @@ export interface GeneratorResult {
 
 
 // ---------------------------------------------------------------------------
+// Word list analysis
+// ---------------------------------------------------------------------------
+
+/**
+ * Length buckets used throughout the word generator.
+ * Short words are the most valuable for grid density — they slot into
+ * narrow gaps between longer words and enable high intersection counts.
+ */
+export type LengthBucket = 'short' | 'medium' | 'long'
+
+/**
+ * Length bucket boundaries (inclusive).
+ * These mirror the ranges described in the system prompt.
+ */
+export const BUCKET_SHORT_MAX  = 5    // 3–5 letters
+export const BUCKET_MEDIUM_MAX = 9    // 6–9 letters
+                                      // 10–15 = long
+
+/**
+ * Target fractions for each bucket in the generated batch.
+ * Computed dynamically by analyzeWordList based on what is already present.
+ */
+export interface BucketTarget {
+  short:  number   // 0.0–1.0
+  medium: number
+  long:   number
+}
+
+/**
+ * Analysis of an existing word list's length distribution.
+ * Produced by analyzeWordList() and consumed by buildPrompt().
+ */
+export interface WordListAnalysis {
+  /** Total words analysed */
+  total:        number
+  /** Count per bucket */
+  counts:       Record<LengthBucket, number>
+  /** Fraction per bucket (0.0–1.0) */
+  fractions:    Record<LengthBucket, number>
+  /** Recommended target fractions for the new batch */
+  targets:      BucketTarget
+  /** Human-readable summary for prompt injection */
+  summary:      string
+}
+
+// ---------------------------------------------------------------------------
 // Errors
 // ---------------------------------------------------------------------------
 

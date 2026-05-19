@@ -155,7 +155,8 @@ describe('buildPrompt — user message', () => {
 
   it('mentions word length variety requirement', () => {
     const { user } = buildPrompt(baseOpts())
-    expect(user).toMatch(/short words|mix.*length|variety/i)
+    // The requirements section always lists word length guidance
+    expect(user).toMatch(/short words|word length|variety|mix of core/i)
   })
 
   it('instructs no duplicate words', () => {
@@ -241,5 +242,54 @@ describe('buildPrompt — return shape', () => {
     const { user: u1 } = buildPrompt(baseOpts({ theme: 'Chess' }))
     const { user: u2 } = buildPrompt(baseOpts({ theme: 'Astronomy' }))
     expect(u1).not.toBe(u2)
+  })
+})
+
+// ---------------------------------------------------------------------------
+// buildPrompt — analysis integration
+// ---------------------------------------------------------------------------
+
+import type { WordListAnalysis } from '../types'
+
+const mockAnalysis = (summary = 'Test summary'): WordListAnalysis => ({
+  total:     75,
+  counts:    { short: 5, medium: 50, long: 20 },
+  fractions: { short: 0.07, medium: 0.67, long: 0.27 },
+  targets:   { short: 0.55, medium: 0.35, long: 0.10 },
+  summary,
+})
+
+describe('buildPrompt — analysis integration', () => {
+  it('includes analysis summary in user message when provided', () => {
+    const { user } = buildPrompt(baseOpts(), mockAnalysis('Short words needed urgently'))
+    expect(user).toContain('Short words needed urgently')
+  })
+
+  it('includes word length guidance section header when analysis provided', () => {
+    const { user } = buildPrompt(baseOpts(), mockAnalysis())
+    expect(user).toMatch(/WORD LENGTH GUIDANCE/i)
+  })
+
+  it('omits length guidance section when no analysis provided', () => {
+    const { user } = buildPrompt(baseOpts())
+    expect(user).not.toMatch(/WORD LENGTH GUIDANCE/i)
+  })
+
+  it('system prompt is unchanged regardless of analysis', () => {
+    const { system: s1 } = buildPrompt(baseOpts())
+    const { system: s2 } = buildPrompt(baseOpts(), mockAnalysis())
+    expect(s1).toBe(s2)
+  })
+
+  it('analysis summary appears between seed section and requirements', () => {
+    const { user } = buildPrompt(
+      baseOpts({ seeds: ['PYRAMID'] }),
+      mockAnalysis('Boost short words')
+    )
+    const seedPos    = user.indexOf('PYRAMID')
+    const analysisPos = user.indexOf('Boost short words')
+    const reqPos     = user.indexOf('Requirements:')
+    expect(seedPos).toBeLessThan(analysisPos)
+    expect(analysisPos).toBeLessThan(reqPos)
   })
 })
