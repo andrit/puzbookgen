@@ -1,0 +1,85 @@
+word,clue,difficulty
+ALBEDO,The fraction of sunlight a surface reflects back into space,medium
+APHELION,The point in an orbit farthest from the sun,medium
+APOGEE,The point in a lunar or satellite orbit farthest from Earth,medium
+ASTEROID,A rocky body orbiting the sun smaller than a planet,medium
+ATMOSPHERE,A layer of gases held around a planet by gravity,hard
+AURORA,A colorful light display in polar skies caused by charged particles,medium
+AXIS,The imaginary line through a planet around which it rotates,easy
+BINARY,A system of two stars gravitationally bound to each other,medium
+BLACK,A region of space where gravity prevents even light from escaping,easy
+BLUESHIFT,A decrease in wavelength as a light source approaches,medium
+BOLIDE,A very bright meteor that explodes in Earth's atmosphere,medium
+BROWN,A body too large to be a planet but too small to fuse hydrogen,easy
+CELESTIAL,Relating to the sky and objects visible in the night sky,hard
+CERES,The largest object in the asteroid belt and a dwarf planet,easy
+CHROMOSPHERE,The layer of the sun above the photosphere,hard
+COMET,An icy body that develops a tail when approaching the sun,easy
+CONJUNCTION,Two celestial objects appearing close together in the sky,hard
+CONSTELLATION,A named pattern of stars seen from Earth,hard
+CORONA,The outermost layer of the sun visible during a total eclipse,medium
+CRATER,A bowl-shaped depression formed by a meteorite impact,easy
+CRUST,The thin outer rocky layer of a terrestrial planet,easy
+DARK,Matter whose presence is inferred by gravity but cannot be seen,easy
+DWARF,A planet-like body that has not cleared its orbital neighborhood,easy
+ECLIPSE,The blocking of one celestial body by another,medium
+ECLIPTIC,The apparent path of the sun across the sky through the year,medium
+ELECTROMAGNETIC,The full spectrum of radiation from radio waves to gamma rays,hard
+ELLIPSE,The oval shape of planetary orbits described by Kepler,medium
+EMISSION,A type of nebula glowing from gas excited by nearby stars,medium
+EQUINOX,The two moments each year when day and night are equal length,medium
+EXOPLANET,A planet orbiting a star outside our solar system,hard
+FISSION,The splitting of a heavy atomic nucleus releasing energy,medium
+FUSION,The combining of light nuclei releasing enormous energy in stars,medium
+GALACTIC,Relating to or coming from the Milky Way galaxy,medium
+GALAXY,A massive system of stars gas and dust held together by gravity,medium
+GIBBOUS,A moon phase where more than half the disk is illuminated,medium
+GRAVITY,The force of attraction between any two objects with mass,medium
+HELIOPAUSE,The boundary where the solar wind meets interstellar space,hard
+HELIOSPHERE,The vast bubble of solar wind surrounding the solar system,hard
+HORIZON,The line separating Earth from the sky as seen from a location,medium
+HUBBLE,The space telescope launched in 1990 that transformed astronomy,medium
+HYPERGIANT,An extremely luminous star far exceeding normal supergiant size,hard
+INFRARED,A wavelength of light beyond red that carries heat energy,medium
+JOVIAN,Describing a large gas giant planet similar in type to Jupiter,medium
+KELVIN,The temperature scale used in astronomy starting from absolute zero,medium
+KEPLER,The astronomer who described the elliptical nature of planetary orbits,medium
+LAGRANGE,A stable gravitational point where a small body can orbit,medium
+LIGHT,The distance light travels in one year used to measure space,easy
+LIMB,The outer edge of the visible disk of the moon or a planet,easy
+LUMINOSITY,The total amount of energy radiated by a star per second,hard
+LUNAR,Relating to or characteristic of Earth's natural satellite,medium
+MAGNITUDE,A scale measuring the brightness of a star or object in the sky,hard
+MANTLE,The layer between a planet's crust and its core,easy
+MASS,The total amount of matter contained within an object,easy
+MERIDIAN,An imaginary line running from north to south through the zenith,medium
+METEOR,A streak of light caused by a particle burning in the atmosphere,medium
+METEORITE,A space rock that survives its passage through atmosphere and lands,hard
+MILKY,The galaxy containing our solar system seen as a faint band,easy
+NEBULA,A vast cloud of gas and dust in interstellar space,medium
+NEUTRON,A collapsed stellar remnant composed entirely of neutrons,medium
+NOVA,A sudden brightening of a white dwarf star from accreted matter,easy
+OBLIQUITY,The tilt of a planet's axis relative to its orbital plane,hard
+OCCULTATION,One celestial body passing in front of and hiding another,hard
+OPPOSITION,When an outer planet is directly opposite the sun from Earth,hard
+ORBIT,The curved path of an object moving around a larger body,easy
+PARALLAX,The apparent shift of a nearby star against the distant background,medium
+PARSEC,A unit of astronomical distance equal to 3.26 light-years,medium
+PENUMBRA,The partial shadow surrounding the full shadow of an eclipse,medium
+PERIGEE,The point in a moon or satellite orbit closest to Earth,medium
+PERIHELION,The point in a planetary orbit closest to the sun,medium
+PHOTON,A quantum particle carrying electromagnetic energy,medium
+PHOTOSPHERE,The visible surface layer of the sun,hard
+PLASMA,The fourth state of matter found in stars and lightning,medium
+PRECESSION,The slow wobble of Earth's rotational axis over millennia,medium
+PULSAR,A rapidly rotating neutron star emitting regular radio pulses,medium
+QUASAR,An extremely luminous galactic nucleus powered by a black hole,medium
+REDSHIFT,An increase in light wavelength as a source moves away,medium
+RETROGRADE,Apparent backward motion of a planet as Earth overtakes it,hard
+REVOLUTION,One complete orbit of a body around its parent object,hard
+SOLSTICE,The moment when the sun reaches its greatest declination north or south,medium
+SPECTROSCOPY,Analysis of light wavelengths to determine composition,hard
+SUNSPOT,A dark cooler region on the sun's surface caused by magnetic fields,medium
+SUPERNOVA,The explosive death of a massive star,hard
+TERRESTRIAL,Describing small rocky planets similar in type to Earth,hard
+ZENITH,The point directly overhead in the sky,medium

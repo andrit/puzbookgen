@@ -1,0 +1,78 @@
+word,clue,difficulty
+AIRBALL,A shot attempt that misses the rim and backboard entirely,medium
+ALLEY,A lob pass caught and dunked or layup converted above the rim,medium
+ASSIST,A pass that directly leads to a teammate scoring,easy
+BACKBOARD,The rectangular board behind the basket,medium
+BACKCOURT,The half of the court a team defends,medium
+BANK,A shot that bounces off the backboard before entering the basket,easy
+BASELINE,The boundary line running behind each basket,medium
+BLOCK,Legally deflecting an opponent's shot attempt,easy
+BOUNCE,Passing the ball to a teammate by bouncing it off the floor,easy
+BOX,The painted rectangular area beneath each basket,easy
+BUZZER,A shot released before the horn sounds to end a period,medium
+CARRY,An illegal rolling of the ball in the hand while dribbling,easy
+CENTER,The tallest player who typically plays near the basket,easy
+CHARGE,An offensive foul called when a player runs into a set defender,medium
+CHEST,A two-handed pass thrown directly from the chest,easy
+CLEAR,Securing the ball from a missed shot off the rim or board,easy
+CORNER,A three-point shot taken from the side of the arc near baseline,medium
+COURT,The playing surface marked by boundary and key lines,easy
+CROSSOVER,Quickly switching the dribble from one hand to the other,medium
+DEAD,Describing the ball when the clock is stopped and play halts,easy
+DEFENSIVE,Relating to the team trying to prevent the other from scoring,medium
+DENIAL,Positioning to prevent a player from receiving a pass,medium
+DOUBLE,A violation of dribbling with two hands simultaneously,medium
+DOWNTOWN,Informal term for a long-range three-point shot attempt,medium
+DRAW,To provoke a foul from a defender through contact,easy
+DRIBBLE,Bouncing the ball continuously while moving,easy
+DRIVE,Aggressively moving toward the basket with the ball,easy
+DUNK,Forcefully pushing the ball through the hoop from above,easy
+ELBOW,The corner where the free-throw line meets the lane,medium
+FAST,A quick transition offense before the defense can set up,easy
+FLAGRANT,A severe foul involving unnecessary or excessive contact,medium
+FLOP,Exaggerating contact to draw an offensive foul call,easy
+FORWARD,A versatile player who plays between the guard and center,medium
+FOUL,Illegal contact against an opponent,easy
+FREE,An uncontested shot from the charity stripe worth one point,easy
+FRONTCOURT,The offensive half of the court where a team scores,medium
+FULLCOURT,A defensive press covering the entire length of the floor,medium
+GOALTEND,Illegally touching a shot on its downward arc toward the basket,medium
+GUARD,A player who handles the ball and directs the offense,easy
+HACK,Slapping at a player's arms or hands while they shoot,easy
+HALFCOURT,An offense or shot attempted from the midcourt area,medium
+HELP,A teammate shifting position to assist in stopping a drive,easy
+INBOUND,Passing the ball into play from out of bounds,medium
+INTENTIONAL,A deliberate foul called to stop the clock in late game,hard
+ISOLATION,A play designed to give one player a one-on-one opportunity,hard
+JUMP,The opening tip-off or any held-ball situation restart,easy
+KEY,The painted lane area beneath the basket also called the paint,easy
+LAYUP,A close-range shot banked off the backboard,easy
+LOOSE,A ball not controlled by either team after a scramble,easy
+MAN,A defensive scheme where each player guards one opponent,easy
+MIDRANGE,A jump shot taken between the three-point line and the key,medium
+MOTION,A fluid offensive system of continuous player movement,medium
+MOVING,Setting an illegal screen while still shuffling the feet,medium
+OFFENSIVE,Relating to the team currently in possession of the ball,medium
+OVERTIME,An extra period played when the score is tied at regulation,medium
+PAINT,The colored lane area beneath the basket,easy
+PALM,An illegal move of resting the ball on an open upturned hand,easy
+PASS,Moving the ball to a teammate through the air or off the floor,easy
+PICK,A legal stationary screen set to free a teammate from a defender,easy
+PIVOT,Rotating on one planted foot while holding the ball,easy
+POINT,The primary ball-handling guard who leads the offense,easy
+POST,The area near the basket where a big player sets up,easy
+PRESS,An aggressive defensive scheme applied as far as halfcourt,easy
+REBOUND,Retrieving a missed shot from the rim or backboard,medium
+REVERSE,A layup finished on the opposite side of the backboard,medium
+SCREEN,A legal block set by a stationary offensive player,easy
+SHOT,A high-contact foul committed against a player in the act,easy
+SIXTH,An award given to the best reserve player off the bench,medium
+SLAM,An emphatic dunk driving the ball through the rim with power,easy
+STEAL,Taking the ball away from an opponent through legal means,easy
+SWISH,A shot that enters the basket without touching the rim,easy
+TECHNICAL,A foul called for unsportsmanlike conduct or delay of game,medium
+TIMEOUT,A stoppage in play called by a team to rest or strategize,medium
+TRANSITION,Moving quickly from offense to defense or vice versa,hard
+TRAVELING,Taking too many steps without dribbling the ball,medium
+TRIPLE,Recording ten or more in three statistical categories in one game,medium
+ZONE,A defensive scheme where players guard areas rather than people,easy

@@ -1,0 +1,80 @@
+word,clue,difficulty
+ARCADE,A series of arches supported by columns or piers,medium
+ARCH,A curved structure spanning an opening and bearing a load,easy
+ATRIUM,A central open interior courtyard often topped with glass,medium
+BALCONY,A projecting platform attached to the exterior of a building,medium
+BAROQUE,An ornate architectural style of 17th century Europe,medium
+BASILICA,A long rectangular hall with a central nave and side aisles,medium
+BATTLEMENT,A parapet with alternating gaps used for defense on castle walls,medium
+BEAM,A horizontal structural member spanning between supports,easy
+BEARING,A wall that carries the load from floors and roof above it,easy
+BELFRY,The upper part of a tower where bells are hung,medium
+BLUEPRINT,A technical drawing showing the plans for a building,medium
+BRACKET,A projecting support attached to a wall to carry a load,easy
+BUTTRESS,A projecting stone support bracing the wall of a cathedral,medium
+CANOPY,A roof-like projection over a door or window,medium
+CANTILEVER,A projecting horizontal structure supported only at one end,hard
+CAPITAL,The decorative top of a column,medium
+CLADDING,An outer layer of material applied to the face of a building,medium
+CLERESTORY,A row of high windows admitting light above lower roof levels,hard
+COLONNADE,A row of evenly spaced columns supporting a roof,medium
+COLUMN,A vertical cylindrical support element,easy
+COMPRESSION,A force that squeezes and shortens a structural member,hard
+CORBEL,A stone bracket projecting from a wall to support a load,medium
+CORNICE,A decorative horizontal molding projecting at the top of a wall,medium
+CRYPT,An underground chamber beneath a church floor,easy
+CUPOLA,A small dome sitting on top of a roof or larger dome,medium
+CURTAIN,A non-structural outer wall hung from a building's frame,easy
+DOME,A rounded vault forming the roof of a building,easy
+DORMER,A window set into a sloping roof,easy
+EAVE,The lower edge of a roof that overhangs the wall below,easy
+ELEVATION,A drawing showing the vertical face of a building,medium
+FACADE,The principal front face of a building,medium
+FENESTRATION,The arrangement and design of windows in a building,hard
+FINIAL,A decorative pointed ornament at the top of a spire or gable,medium
+FLUTE,A vertical groove carved along the shaft of a column,easy
+FLYING,A half-arch transmitting roof thrust to an outer pier,easy
+FOOTING,The widened base of a foundation distributing the building's load,medium
+FORMWORK,Temporary molds into which concrete is poured and set,medium
+FOUNDATION,The below-ground structure transferring loads to the earth,medium
+FRIEZE,A horizontal band of decoration running along a wall,medium
+GABLE,The triangular upper portion of a wall at the end of a ridged roof,easy
+GARGOYLE,A carved grotesque figure serving as a waterspout on a building,medium
+GEORGIAN,A symmetrical brick architectural style of 18th century Britain,medium
+GOTHIC,A medieval style characterized by pointed arches and flying buttresses,medium
+GROIN,A vault formed by two barrel vaults intersecting at right angles,easy
+HAMMER,A type of timber roof truss projecting inward from side walls,easy
+HIPPED,A roof that slopes downward on all four sides,easy
+INFILL,Material used to fill the spaces in a structural frame,easy
+IONIC,A Greek column order distinguished by its scroll-like capital,medium
+JOIST,A horizontal timber or steel member supporting a floor or ceiling,easy
+KEYSTONE,The central wedge-shaped stone locking an arch in position,medium
+LINTEL,A horizontal beam spanning a door or window opening,medium
+LOAD,The weight and forces a structure must safely carry,easy
+LOGGIA,An open gallery or corridor with one side open to the outside,medium
+MANSARD,A roof with a double slope on all four sides,medium
+MASONRY,Construction using stone brick or concrete block,medium
+MODULE,A standardized unit of measurement used to regulate proportions,medium
+MORTAR,A paste binding bricks or stones in masonry construction,easy
+MULLION,A vertical dividing bar between window panes,medium
+NAVE,The central longitudinal space of a church,easy
+OCULUS,A circular opening or window at the top of a dome,medium
+OGEE,An S-shaped molding curving both concave and convex,medium
+PARAPET,A low protective wall at the edge of a roof or balcony,medium
+PEDIMENT,A triangular gable above the columns of a classical facade,medium
+PIER,A solid vertical mass of masonry supporting a structure,easy
+PILASTER,A flat rectangular column projecting slightly from a wall,medium
+PLINTH,The base block beneath a column pedestal or statue,medium
+PORTICO,A porch with a roof supported by columns at the building entrance,medium
+QUOIN,Dressed corner stones at the angle of a masonry building,medium
+RAFTER,A sloping roof timber running from the ridge to the eave,medium
+RENDERING,A coat of plaster or cement applied to an exterior wall,medium
+ROTUNDA,A circular building or room covered by a dome,medium
+RUSTICATION,Masonry with deeply recessed joints creating a rough texture,hard
+SOFFIT,The underside of an arch staircase or overhanging eave,medium
+SPAN,The distance between two supports of a beam or arch,easy
+SPIRE,A tall tapering pointed structure rising from a tower,easy
+TENSION,A force that pulls and stretches a structural member,medium
+TRACERY,Decorative stone ribs forming patterns in Gothic window heads,medium
+TRUSS,A rigid triangulated framework used to span large distances,medium
+VAULT,An arched ceiling or roof of stone or brick,easy

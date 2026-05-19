@@ -1,6 +1,6 @@
 {
   "name": "puzzle-book-generator",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "private": true,
   "description": "Puzzle book publishing platform \u2014 crossword books for print and screen",
   "workspaces": [

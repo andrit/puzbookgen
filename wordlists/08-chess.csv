@@ -1,0 +1,83 @@
+word,clue,difficulty
+ADJOURNMENT,A pause in a game continued at a later scheduled time,hard
+ANNOTATION,Written analysis of moves and variations in a recorded game,hard
+ATTACK,Threatening a piece or a position with intent to win material,easy
+BACK,A pawn promotion rank at the far end of the board,easy
+BATTERY,Two or more pieces of the same type aligned on a rank file or diagonal,medium
+BIND,A positional grip restricting the opponent's piece mobility,easy
+BISHOP,A long-range piece that moves diagonally on one color,easy
+BLITZ,A very fast game format with only a few minutes per side,easy
+BLUNDER,A serious mistake that loses material or a won position,easy
+BOOK,Opening theory memorized from established reference games,easy
+BRILLIANCY,A strikingly beautiful and unexpected sacrificial combination,hard
+CANDIDATE,A move considered during calculation before a decision is made,medium
+CAPTURE,Taking an opponent's piece by moving onto its square,easy
+CASTLE,Moving the king two squares and the rook to the other side,easy
+CENTER,The four central squares controlling the heart of the board,easy
+CHECK,Placing the king under direct attack requiring an immediate response,easy
+CHECKMATE,A check from which the king cannot escape ending the game,medium
+CLEARANCE,A sacrifice moving a piece off a key square for another to use,medium
+CLOSED,A position with fixed pawns limiting mobility and exchanges,easy
+COMPENSATION,Positional advantages received in exchange for material,hard
+CONNECTED,Describing pawns on adjacent files that support each other,medium
+CONTROL,Dominance over key squares files or ranks on the board,easy
+CONVERSION,The technique of turning a winning advantage into a win,hard
+COUNTERPLAY,Active threats created by the defending side,medium
+CRAMPED,A position where pawns restrict the movement of own pieces,easy
+CRITICAL,The most important moment or decision point in a game,medium
+DECOY,A sacrifice luring an opposing piece to an unfavorable square,easy
+DEFEND,To protect a threatened piece square or position,easy
+DEFLECTION,A tactic forcing a defending piece away from a key duty,medium
+DIAGONAL,The angled lines of squares along which bishops and queens travel,medium
+DISCOVERED,An attack revealed by moving a piece out of another's line,medium
+DOUBLED,Pawns of the same color on the same file,easy
+DRAW,A result where neither player wins the game,easy
+EN,The rule allowing a pawn capturing another that just moved two squares,easy
+ENDGAME,The final phase of the game with few pieces remaining,medium
+EQUALITY,A balanced position where neither side has a clear advantage,hard
+ESCAPE,A square to which the king or a threatened piece can safely move,easy
+EXCHANGE,Trading pieces of roughly equal value,easy
+FIANCHETTO,Developing a bishop to the corner square of its opening diagonal,medium
+FILE,A vertical column of eight squares on the board,easy
+FLANK,The queenside or kingside region of the board away from center,easy
+FORK,A single piece attacking two enemy pieces simultaneously,easy
+FORTRESS,A defensive drawing setup that cannot be broken by the attacker,medium
+GAMBIT,Sacrificing a pawn in the opening to gain time or position,easy
+GRANDMASTER,The highest title awarded by FIDE to elite-level players,medium
+HANGING,A piece that is undefended and can be taken for free,easy
+HORIZON,The depth limit beyond which an engine stops calculating moves,medium
+HYPERMODERN,An opening style controlling the center with pieces from afar,hard
+INITIATIVE,The ability to make threats and dictate the flow of the game,medium
+ISOLATED,A pawn with no friendly pawns on adjacent files,medium
+KING,The most important piece whose loss ends the game,easy
+KNIGHT,The only piece that moves in an L-shape and can jump over others,easy
+LUFT,A pawn move creating an escape square for the king,easy
+MAJORITY,Having more pawns than the opponent on one side of the board,medium
+MANEUVER,Repositioning a piece through multiple moves to a better square,medium
+MASTERCLASS,An instructional demonstration of high-level chess technique,hard
+MATERIAL,The total relative value of pieces each player possesses,medium
+MIDDLEGAME,The phase of the game after opening development is complete,medium
+MINORITY,An attack using fewer pawns to create weaknesses in the majority,medium
+MOBILITY,The number and quality of moves available to a piece,medium
+NOTATION,A system of recording moves using letters and numbers,medium
+OBJECTIVELY,Without bias evaluating a position based on its true assessment,hard
+OPEN,A position with few pawns and active piece play on open lines,easy
+OUTPOST,A square where a piece cannot be attacked by enemy pawns,medium
+OVERLOAD,A tactic targeting a defender responsible for too many duties,medium
+PAWN,The smallest piece that moves forward and captures diagonally,easy
+PASSED,A pawn with no enemy pawn blocking or guarding its path to promotion,easy
+PIN,A tactic preventing a piece from moving without exposing a more valuable piece,easy
+POSITIONAL,A strategic style favoring long-term advantages over sharp tactics,hard
+PROPHET,A player who correctly anticipates the opponent's plans,medium
+QUEEN,The most powerful piece able to move any distance in any direction,easy
+QUEENSIDE,The half of the board containing the queen at the game's start,medium
+RANK,A horizontal row of eight squares on the chessboard,easy
+RESIGN,To concede defeat by voluntarily stopping the game,easy
+ROOK,A piece that moves horizontally and vertically any number of squares,easy
+SACRIFICE,Offering a piece to gain a tactical or positional advantage,medium
+SKEWER,A tactic attacking a valuable piece forcing it to expose a lesser one,medium
+STALEMATE,A position where the player to move has no legal move but is not in check,medium
+STRATEGY,Long-term planning to improve position and restrict the opponent,medium
+SUPPORT,Defending a piece or pawn by placing another piece behind it,easy
+TEMPO,A unit of time gained or lost through the order of moves,easy
+TACTICS,Short-term calculations to win material or force checkmate,medium

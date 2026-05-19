@@ -13,12 +13,14 @@ import yargs from 'yargs'
 import { hideBin } from 'yargs/helpers'
 import * as generateBook from './commands/generate-book'
 import * as importWords from './commands/import-words'
+import * as generateWords from './commands/generate-words'
 
 yargs(hideBin(process.argv))
   .scriptName('pbg')
   .usage('$0 <command> [options]')
   .command(generateBook)
   .command(importWords)
+  .command(generateWords)
   .demandCommand(1, 'Please specify a command')
   .strict()
   .help()

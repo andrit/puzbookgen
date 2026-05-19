@@ -17,6 +17,7 @@ export {
   buildGrid,
   buildCrosswordGridAndClues,
   trimGrid,
+  compactGrid,
 } from './crossword/crossword.functions'
 
 export type {

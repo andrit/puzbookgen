@@ -1,0 +1,85 @@
+word,clue,difficulty
+AGGREGATE,The total combined value of all individual components in an economy,hard
+ARBITRAGE,Profiting by exploiting price differences between markets,hard
+AUSTERITY,Government policies cutting spending to reduce a budget deficit,medium
+BAILOUT,Government financial support given to a failing institution,medium
+BALANCE,A statement summarizing a firm's assets liabilities and equity,medium
+BOND,A debt security paying regular interest and returning principal at maturity,easy
+BOOM,A period of strong economic expansion and rising output,easy
+BROKER,An intermediary executing trades on behalf of clients,easy
+BUBBLE,An asset price inflating far beyond underlying value,easy
+BUDGET,A plan allocating expected income and expenditure over a period,easy
+CAPITAL,Wealth in the form of money or assets used to generate income,easy
+CARTEL,A group of producers colluding to control prices and output,medium
+CENTRAL,A government bank managing a nation's money supply and interest rates,medium
+COMMODITY,A raw material or primary product traded in bulk on exchanges,medium
+COMPARATIVE,The advantage of producing a good at a lower opportunity cost,medium
+COMPETITION,A market condition where multiple firms compete for customers,medium
+CONSUMER,The measure of average price changes for household goods,medium
+CONTRACTION,A period of declining economic output and rising unemployment,hard
+CREDIT,The ability to borrow money with a promise of future repayment,easy
+CURRENCY,The system of money in common use in a particular country,medium
+DEBT,Money owed to a lender by a borrower,easy
+DEFICIT,Spending exceeding income creating a financial shortfall,medium
+DEFLATION,A general sustained decrease in the price level,medium
+DEMAND,The quantity of a good consumers are willing and able to buy,easy
+DEPRECIATION,A reduction in the value of an asset or currency over time,hard
+DERIVATIVE,A financial contract whose value depends on an underlying asset,hard
+DIVIDEND,A periodic payment made to shareholders from company profits,medium
+DUOPOLY,A market dominated by exactly two competing firms,hard
+ELASTICITY,The responsiveness of quantity demanded to a change in price,hard
+EQUITY,The ownership interest in a company after liabilities are subtracted,medium
+EXCHANGE,The rate at which one currency converts to another,medium
+FISCAL,Relating to government revenue spending and debt policy,medium
+FIXED,A cost remaining constant regardless of how much is produced,easy
+FOREX,The global market for trading national currencies against each other,medium
+FRANC,A former currency used in France and several other nations,easy
+FUND,A pooled investment vehicle managed on behalf of shareholders,easy
+FUTURES,A contract to buy or sell an asset at a set price on a future date,medium
+GDP,The total monetary value of all goods and services produced in a country,easy
+GILT,A UK government bond considered a low-risk investment,easy
+HEDGE,An investment reducing the risk of loss from another position,easy
+HYPERINFLATION,An extreme and rapid rise in prices destroying a currency's value,hard
+INCENTIVE,A factor motivating a person or firm to take a particular action,medium
+INDEX,A statistical measure tracking changes in a collection of assets,easy
+INFLATION,A general sustained increase in the price level over time,medium
+INTEREST,The cost charged by a lender for the use of borrowed money,easy
+KEYNES,The economist who advocated government spending to stimulate demand,medium
+LABOR,The human effort contributing to the production of goods and services,easy
+LAISSEZ,A doctrine opposing government interference in the free market,medium
+LEVERAGE,Using borrowed capital to amplify potential returns on investment,medium
+LIABILITY,An obligation or debt owed to another party,medium
+LIQUIDITY,How easily an asset can be converted into cash without loss of value,medium
+MACROECONOMICS,The study of economy-wide phenomena like growth and inflation,hard
+MARGINAL,The additional cost of producing one more unit of output,medium
+MARKET,The mechanism through which buyers and sellers exchange goods,easy
+MICROECONOMICS,The study of individual consumer and firm decision-making,hard
+MONETARY,Relating to money supply interest rates and central bank policy,medium
+MONOPOLY,A market controlled entirely by a single supplier,medium
+MORTGAGE,A loan secured against a property repaid over many years,medium
+MULTIPLIER,The effect where an initial spending increase leads to larger total output growth,hard
+OLIGOPOLY,A market dominated by a small number of large competing firms,hard
+OPPORTUNITY,The benefit foregone by choosing one option over the next best alternative,medium
+OUTPUT,The total quantity of goods and services produced,easy
+PORTFOLIO,A collection of financial investments held by an individual or institution,medium
+PRICE,The amount of money charged for a good or service,easy
+PRIVATIZE,To transfer a publicly owned enterprise to private ownership,hard
+PRODUCTIVITY,The efficiency of input factors in generating economic output,hard
+PROFIT,The financial gain after all costs have been deducted from revenue,easy
+PROTECTIONISM,Government policy restricting imports to shield domestic industry,hard
+QUANTITATIVE,A central bank policy of purchasing assets to inject money,hard
+RECESSION,A period of economic decline lasting at least two consecutive quarters,medium
+RESERVE,Money a bank holds back from lending as a safety buffer,easy
+REVENUE,The total income generated by a business before expenses,medium
+RISK,The possibility of a financial loss or adverse outcome,easy
+SCARCITY,The fundamental economic problem of limited resources and unlimited wants,medium
+SHARE,A unit of ownership in a publicly traded corporation,easy
+STAGFLATION,A rare combination of stagnant growth and rising inflation,hard
+STOCK,An ownership stake in a company traded on a public exchange,easy
+SUBSIDY,Government financial support reducing the cost of a good or service,medium
+SUPPLY,The quantity of a good producers are willing and able to sell,easy
+SURPLUS,Income exceeding expenditure creating a positive balance,medium
+TARIFF,A tax imposed on imported goods to protect domestic industries,medium
+TRADE,The exchange of goods and services between countries,easy
+TRUST,A large business combination formerly used to monopolize industries,easy
+YIELD,The income generated on an investment expressed as a percentage,easy

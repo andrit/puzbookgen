@@ -43,10 +43,74 @@ import {
  * Isolated as the only impure function in this module.
  * Replace this function when building the custom algorithm (Phase 3).
  */
-const runLayoutGenerator = (words: LibInputWord[]): LibLayoutResult => {
+/**
+ * Calls the layout library, retrying with different word orderings to find
+ * the most compact result (highest placed-word count, lowest dead-space ratio).
+ *
+ * The library is deterministic per input order, so shuffling the candidate
+ * list between attempts produces meaningfully different layouts. We run up to
+ * RETRY_ATTEMPTS times and keep whichever result placed the most words.
+ */
+const RETRY_ATTEMPTS = 6
+
+const runLayoutGenerator = (words: LibInputWord[], minWords: number): LibLayoutResult => {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const generate = require('crossword-layout-generator').generateLayout
-  return generate(words) as LibLayoutResult
+
+  let best: LibLayoutResult | null = null
+  let bestCount = -1
+
+  for (let attempt = 0; attempt < RETRY_ATTEMPTS; attempt++) {
+    // Attempt 0: longest first (best for density)
+    // Attempt 1: shortest first (sometimes unlocks different patterns)
+    // Attempt 2+: pseudo-random by attempt seed
+    let shuffled: LibInputWord[]
+    if (attempt === 0) {
+      shuffled = [...words].sort((a, b) => b.answer.length - a.answer.length)
+    } else if (attempt === 1) {
+      shuffled = [...words].sort((a, b) => a.answer.length - b.answer.length)
+    } else {
+      shuffled = [...words].sort((a, b) => {
+        const seed = attempt * 31337 + a.answer.charCodeAt(0) - b.answer.charCodeAt(0)
+        return seed % 3 - 1
+      })
+    }
+
+    const result = generate(shuffled) as LibLayoutResult
+    const placedWords = result.result.filter((w) => w.orientation !== 'none')
+    const placed      = placedWords.length
+
+    // ── Intersection density score ───────────────────────────────────────────
+    // Count how many cells are shared between an across word and a down word.
+    // This directly measures how tightly the words interlock.
+    // A grid with 15 words and 20 intersections beats one with 15 words and 8.
+    const cellOwners = new Map<string, number>()
+    for (const w of placedWords) {
+      const len = w.answer.length
+      for (let i = 0; i < len; i++) {
+        const key = w.orientation === 'across'
+          ? `${w.starty},${w.startx + i}`
+          : `${w.starty + i},${w.startx}`
+        cellOwners.set(key, (cellOwners.get(key) ?? 0) + 1)
+      }
+    }
+    const intersections = [...cellOwners.values()].filter(v => v > 1).length
+
+    // Score: intersections are worth 50pts each, placed words 100pts,
+    // grid area penalised. High intersections = dense, connected grid.
+    const area  = (result.rows || 1) * (result.cols || 1)
+    const score = intersections * 50 + placed * 100 - area
+
+    if (score > bestCount) {
+      bestCount = score
+      best      = result
+    }
+
+    // Early exit if excellent density achieved
+    if (placed === words.length && intersections >= placed - 1) break
+  }
+
+  return best!
 }
 
 // ---------------------------------------------------------------------------
@@ -83,12 +147,16 @@ export class CrosswordGenerator implements IPuzzleGenerator {
       theme = null,
       title = 'Crossword Puzzle',
       author = null,
+      graphic = null,
+      lens = null,
     } = options
 
     if (wordList.length === 0) {
       throw new Error('Word list is empty — cannot generate a crossword puzzle')
     }
 
+    // Normalise: filter, uppercase, deduplicate, take up to maxWords.
+    // The engine sorts internally (longest-first) so no pre-sorting needed here.
     const candidates = normalizeCandidates(wordList, maxWords)
 
     if (candidates.length < minWords) {
@@ -97,7 +165,7 @@ export class CrosswordGenerator implements IPuzzleGenerator {
       )
     }
 
-    const layoutResult = runLayoutGenerator(candidates)
+    const layoutResult = runLayoutGenerator(candidates, minWords)
     const placedWords = layoutResult.result.filter((w) => w.orientation !== 'none')
 
     if (placedWords.length < minWords) {
@@ -122,6 +190,8 @@ export class CrosswordGenerator implements IPuzzleGenerator {
         wordCount: placedWords.length,
         gridWidth: grid.width,
         gridHeight: grid.height,
+        graphic,
+        lens,
       },
       grid,
       clues,

@@ -1,0 +1,202 @@
+{
+  "title": "The Observatory",
+  "subtitle": "Thirty-Two Puzzles Across the Systems of Human Knowledge",
+  "author": "",
+  "cover": "observatory-scene",
+  "printTarget": "kdp-6x9-bw",
+  "screenTarget": "screen-pdf-tablet",
+  "puzzles": [
+    {
+      "title": "Filmmaking & Film Production",
+      "wordlist": "wordlists/filmmaking-75words-upto4Syllables.csv",
+      "graphic": "The Magnifying Glass",
+      "lens": "magnifier"
+    },
+    {
+      "title": "Nature",
+      "wordlist": "wordlists/nature-75words-upto4Syllables.csv",
+      "graphic": "The Compass & Chart",
+      "lens": "compass"
+    },
+    {
+      "title": "Rules of Football",
+      "wordlist": "wordlists/01-football-rules.csv",
+      "graphic": "The Rule Book",
+      "lens": "telescope"
+    },
+    {
+      "title": "Sports of the Summer Olympics",
+      "wordlist": "wordlists/02-summer-olympics.csv",
+      "graphic": "The Podium",
+      "lens": "porthole"
+    },
+    {
+      "title": "Rules of Basketball",
+      "wordlist": "wordlists/03-basketball-rules.csv",
+      "graphic": "The Rule Book",
+      "lens": "telescope"
+    },
+    {
+      "title": "Sports of the Winter Olympics",
+      "wordlist": "wordlists/04-winter-olympics.csv",
+      "graphic": "The Podium",
+      "lens": "porthole"
+    },
+    {
+      "title": "Weightlifting Workouts",
+      "wordlist": "wordlists/05-weightlifting.csv",
+      "graphic": "The Anatomical Study",
+      "lens": "microscope"
+    },
+    {
+      "title": "Kung Fu Martial Art",
+      "wordlist": "wordlists/06-kung-fu.csv",
+      "graphic": "The Anatomical Study",
+      "lens": "microscope"
+    },
+    {
+      "title": "Rules of Baseball",
+      "wordlist": "wordlists/07-baseball-rules.csv",
+      "graphic": "The Rule Book",
+      "lens": "telescope"
+    },
+    {
+      "title": "Chess",
+      "wordlist": "wordlists/08-chess.csv",
+      "graphic": "The Magnifying Glass",
+      "lens": "magnifier"
+    },
+    {
+      "title": "Cooking Techniques",
+      "wordlist": "wordlists/09-cooking-techniques.csv",
+      "graphic": "The Mortar & Flame",
+      "lens": "loupe"
+    },
+    {
+      "title": "Astronomy",
+      "wordlist": "wordlists/10-astronomy.csv",
+      "graphic": "The Crystal Prism",
+      "lens": "periscope"
+    },
+    {
+      "title": "Ancient Civilizations",
+      "wordlist": "wordlists/01-ancient-civilizations.csv",
+      "graphic": "The Manuscript",
+      "lens": "viewfinder"
+    },
+    {
+      "title": "Jazz & Blues",
+      "wordlist": "wordlists/02-jazz-and-blues.csv",
+      "graphic": "The Open Eye",
+      "lens": "iris"
+    },
+    {
+      "title": "Architecture & Structures",
+      "wordlist": "wordlists/03-architecture.csv",
+      "graphic": "The Manuscript",
+      "lens": "viewfinder"
+    },
+    {
+      "title": "The Human Body",
+      "wordlist": "wordlists/04-human-body.csv",
+      "graphic": "The Anatomical Study",
+      "lens": "microscope"
+    },
+    {
+      "title": "Gemstones & Minerals",
+      "wordlist": "wordlists/05-gemstones-minerals.csv",
+      "graphic": "The Crystal Prism",
+      "lens": "periscope"
+    },
+    {
+      "title": "Sailing & the Sea",
+      "wordlist": "wordlists/06-sailing-sea.csv",
+      "graphic": "The Compass & Chart",
+      "lens": "compass"
+    },
+    {
+      "title": "Literary Devices",
+      "wordlist": "wordlists/07-literary-devices.csv",
+      "graphic": "The Open Eye",
+      "lens": "iris"
+    },
+    {
+      "title": "World Mythology",
+      "wordlist": "wordlists/08-world-mythology.csv",
+      "graphic": "The Open Eye",
+      "lens": "iris"
+    },
+    {
+      "title": "Photography & Cinematography",
+      "wordlist": "wordlists/09-photography.csv",
+      "graphic": "The Magnifying Glass",
+      "lens": "magnifier"
+    },
+    {
+      "title": "The Animal Kingdom",
+      "wordlist": "wordlists/10-animal-kingdom.csv",
+      "graphic": "The Scales",
+      "lens": "camera"
+    },
+    {
+      "title": "Woodworking & Carpentry",
+      "wordlist": "wordlists/11-woodworking.csv",
+      "graphic": "The Mortar & Flame",
+      "lens": "loupe"
+    },
+    {
+      "title": "Chemistry & the Periodic Table",
+      "wordlist": "wordlists/12-chemistry.csv",
+      "graphic": "The Crystal Prism",
+      "lens": "periscope"
+    },
+    {
+      "title": "Classical Music & Orchestras",
+      "wordlist": "wordlists/13-classical-music.csv",
+      "graphic": "The Open Eye",
+      "lens": "iris"
+    },
+    {
+      "title": "Surfing & Ocean Sports",
+      "wordlist": "wordlists/14-surfing.csv",
+      "graphic": "The Compass & Chart",
+      "lens": "compass"
+    },
+    {
+      "title": "World Economics",
+      "wordlist": "wordlists/15-economics.csv",
+      "graphic": "The Scales",
+      "lens": "camera"
+    },
+    {
+      "title": "Hiking & Mountaineering",
+      "wordlist": "wordlists/16-hiking-mountaineering.csv",
+      "graphic": "The Compass & Chart",
+      "lens": "compass"
+    },
+    {
+      "title": "Forensic Science & Criminology",
+      "wordlist": "wordlists/17-forensic-science.csv",
+      "graphic": "The Magnifying Glass",
+      "lens": "magnifier"
+    },
+    {
+      "title": "The Renaissance",
+      "wordlist": "wordlists/18-renaissance.csv",
+      "graphic": "The Manuscript",
+      "lens": "viewfinder"
+    },
+    {
+      "title": "Yoga & Meditation",
+      "wordlist": "wordlists/19-yoga-meditation.csv",
+      "graphic": "The Open Eye",
+      "lens": "iris"
+    },
+    {
+      "title": "Cartography & Geography",
+      "wordlist": "wordlists/20-cartography.csv",
+      "graphic": "The Compass & Chart",
+      "lens": "compass"
+    }
+  ]
+}

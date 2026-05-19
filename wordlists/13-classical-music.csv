@@ -1,0 +1,96 @@
+word,clue,difficulty
+ACCELERANDO,Gradually increasing the tempo,hard
+ADAGIO,A slow and stately tempo marking,medium
+ALLEGRO,A brisk lively tempo,medium
+ANDANTE,A moderately slow walking-pace tempo,medium
+ARPEGGIO,Playing the notes of a chord in rapid succession,medium
+ARTICULATION,The manner in which individual notes are attacked and released,hard
+ATONAL,Music not organized around a home key or tonal center,medium
+BARITONE,A male voice between bass and tenor,medium
+BASS,The lowest male singing voice and the lowest orchestral register,easy
+BATON,A slender stick used by a conductor to lead an orchestra,easy
+CADENZA,A solo virtuoso passage near the end of a concerto movement,medium
+CELLO,A large bowed string instrument held between the knees,easy
+CHAMBER,Music for a small ensemble played in a private room setting,easy
+CHORD,Three or more notes sounded simultaneously,easy
+CHROMATIC,Proceeding in half steps through all twelve notes of the scale,medium
+CLARINET,A single-reed woodwind instrument with a warm cylindrical tone,medium
+CLEF,A symbol at the start of a staff indicating the pitch of its lines,easy
+CODA,A passage concluding and rounding off a musical movement,easy
+CONCERTO,A work featuring a solo instrument accompanied by orchestra,medium
+CONDUCTOR,The musician directing an orchestra through gesture and expression,medium
+CONSONANCE,A combination of notes producing a stable pleasing sound,hard
+CONTRALTO,The lowest female singing voice,medium
+COUNTERPOINT,The art of combining two or more independent melodic lines,hard
+CRESCENDO,Gradually increasing in volume,medium
+DECRESCENDO,Gradually decreasing in volume,hard
+DEVELOPMENT,The central section of sonata form where themes are transformed,hard
+DISSONANCE,A combination of notes producing tension or instability,hard
+DOMINANT,The fifth degree of a scale which creates tension resolving to the tonic,medium
+DOWNBEAT,The first and strongest beat of a measure indicated by a downward baton stroke,medium
+DYNAMICS,The variation in volume between loud and soft passages,medium
+ENSEMBLE,A group of musicians performing together,medium
+EXPOSITION,The first section of sonata form presenting the main themes,hard
+FERMATA,A symbol instructing a note to be held beyond its written duration,medium
+FINALE,The concluding movement of a multi-movement musical work,medium
+FLAT,A symbol lowering a note by a half step,easy
+FLUTE,A transverse woodwind instrument producing a bright airy tone,easy
+FORTE,A dynamic marking indicating loud playing,easy
+FORTISSIMO,A dynamic marking indicating very loud playing,hard
+FUGUE,A contrapuntal composition building on a theme through imitation,easy
+HARMONIC,A high pure tone produced on a string by lightly touching a node,medium
+HARMONY,The vertical combination of notes to form chords,medium
+HARP,A large plucked string instrument with pedals to change key,easy
+HARPSICHORD,A keyboard instrument plucking strings rather than striking them,medium
+HOMOPHONY,A texture with one main melody supported by accompanying chords,hard
+INTERVAL,The pitch distance between two notes,medium
+INVERSION,Turning a chord or melody upside down,medium
+KEY,The tonal center around which a piece is organized,easy
+LARGO,A very slow and broad tempo marking,medium
+LEGATO,Playing notes smoothly and connected without breaks,medium
+LEITMOTIF,A short recurring theme associated with a character or idea,hard
+LENTO,A slow tempo somewhat faster than largo,medium
+LIBRETTO,The text of an opera or other vocal work,medium
+LYRIC,The words sung in an aria or vocal composition,easy
+MAESTRO,A term of respect for a distinguished conductor or composer,medium
+MEASURE,A unit of musical time divided by the time signature,easy
+MELODY,A sequence of single notes forming a recognizable musical line,easy
+MEZZO,A female singing voice between soprano and contralto,easy
+MODULATION,Moving from one key to another within a composition,medium
+MOTIF,A short distinctive musical idea used as a building block,medium
+MOVEMENT,A self-contained section of a larger musical work,easy
+OBOE,A double-reed woodwind instrument with a penetrating nasal tone,easy
+OPERA,A dramatic work combining singing acting and orchestral music,easy
+OPUS,A numbered catalogue designation for a composer's works,easy
+ORATORIO,A large choral work on a sacred text performed without staging,medium
+ORCHESTRA,A large ensemble of strings woodwinds brass and percussion,medium
+OSTINATO,A persistently repeated rhythmic or melodic pattern,medium
+OVERTURE,An orchestral introduction preceding an opera or theatrical work,medium
+PEDAL,A sustained note held while harmonies change above or below it,easy
+PIANISSIMO,A dynamic marking indicating very soft playing,hard
+PIANO,A dynamic marking indicating soft playing or the keyboard instrument,easy
+PIZZICATO,Playing a string instrument by plucking the strings with the finger,hard
+POLYPHONY,A texture of two or more independent simultaneous melodies,hard
+PRESTO,A very fast tempo marking,medium
+QUARTET,A composition for four musicians,medium
+RECITATIVE,A vocal style following speech rhythm used to advance opera's plot,hard
+RESOLUTION,The movement of a dissonant chord to a consonant one,medium
+REST,A symbol indicating silence for a specific duration,easy
+RITARDANDO,Gradually slowing the tempo,hard
+SCALE,A series of notes ascending or descending in a fixed interval pattern,easy
+SCHERZO,A lively playful movement often the third movement of a symphony,medium
+SHARP,A symbol raising a note by a half step,easy
+SLUR,A curved line indicating that notes should be played legato,easy
+SOPRANO,The highest female singing voice,medium
+STACCATO,Playing notes short and detached,medium
+STAFF,The five horizontal lines on which musical notation is written,easy
+SUITE,A collection of instrumental pieces in related keys,easy
+SYMPHONY,A large orchestral work typically in four movements,medium
+TEMPO,The speed at which a piece of music is performed,easy
+TENOR,A high male singing voice,easy
+TIMBRE,The distinctive tone quality that identifies an instrument,medium
+TONIC,The first and home degree of a scale,easy
+TREMOLO,Rapid repetition of a note or alternation between two notes,medium
+TRILL,A rapid alternation between a note and the one directly above it,easy
+VIOLA,A string instrument slightly larger and lower than a violin,easy
+VIOLIN,The highest-pitched bowed string instrument in the orchestra,easy

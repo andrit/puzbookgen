@@ -75,6 +75,10 @@ export interface PuzzleMetadata {
   wordCount: number
   gridWidth: number
   gridHeight: number
+  /** Graphic motif ID — e.g. 'The Magnifying Glass' */
+  graphic?: string | null
+  /** Lens frame type ID — e.g. 'magnifier' | 'telescope' | 'iris' etc. */
+  lens?: string | null
 }
 
 // ---------------------------------------------------------------------------
@@ -114,6 +118,10 @@ export interface GeneratorOptions {
   theme?: string | null
   title?: string
   author?: string | null
+  /** Graphic motif ID to associate with this puzzle */
+  graphic?: string | null
+  /** Lens frame type ID to use when rendering this puzzle */
+  lens?: string | null
 }
 
 export interface ValidationResult {

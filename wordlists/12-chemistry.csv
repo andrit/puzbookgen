@@ -1,0 +1,79 @@
+word,clue,difficulty
+ACID,A substance donating protons with a pH below seven,easy
+ALKALI,A base dissolving in water to produce hydroxide ions,medium
+ALLOY,A mixture of two or more metals,easy
+ANION,A negatively charged ion attracted to a positive electrode,medium
+ANODE,The positive electrode toward which anions migrate,medium
+ATOM,The smallest unit of an element retaining its chemical identity,easy
+ATOMIC,The number of protons in the nucleus of an element's atom,medium
+AVOGADRO,The scientist whose number defines one mole of substance,hard
+BASE,A substance accepting protons with a pH above seven,easy
+BOND,The force of attraction holding atoms together in a molecule,easy
+BUFFER,A solution resisting changes in pH when acid or base is added,medium
+CATALYST,A substance speeding up a reaction without being consumed,medium
+CATHODE,The negative electrode toward which cations migrate,medium
+CATION,A positively charged ion attracted to a negative electrode,medium
+CHAIN,A series of carbon atoms linked to form the backbone of an organic molecule,easy
+COMBUSTION,A rapid chemical reaction releasing heat and light,medium
+COMPOUND,A substance formed when two or more elements chemically combine,medium
+CONCENTRATION,The amount of solute dissolved in a given volume of solvent,hard
+COVALENT,A chemical bond formed by sharing a pair of electrons,medium
+DENSITY,Mass per unit volume of a substance,easy
+DIFFUSION,The movement of particles from high to low concentration,medium
+DISTILLATION,Separating a mixture by heating and condensing its vapor,hard
+ELECTRODE,A conductor through which current enters or leaves a solution,medium
+ELECTROLYSIS,Decomposing a compound using an electric current,hard
+ELECTRON,A negatively charged subatomic particle orbiting the nucleus,medium
+ELEMENT,A pure substance that cannot be broken down by chemical means,easy
+ENDOTHERMIC,A reaction absorbing heat energy from the surroundings,hard
+ENTROPY,A measure of disorder or randomness in a system,medium
+EQUILIBRIUM,The state where forward and reverse reactions proceed at equal rates,hard
+EXOTHERMIC,A reaction releasing heat energy into the surroundings,hard
+FERMENTATION,The anaerobic breakdown of sugars by yeast into alcohol,hard
+FILTRATION,Separating an insoluble solid from a liquid using a barrier,medium
+FISSION,Splitting a heavy nucleus releasing enormous amounts of energy,medium
+FORMULA,A symbolic representation of a compound's elemental composition,medium
+FREE,A highly reactive atom or molecule with an unpaired electron,easy
+FUSION,Combining light nuclei to release energy as in a star,medium
+GAS,A state of matter with no fixed shape or volume,easy
+HALIDE,A compound of a halogen with another element,medium
+HALOGEN,One of the reactive non-metal elements in group seventeen,medium
+HYDRATION,The incorporation of water molecules into a compound's structure,medium
+HYDROGEN,The lightest and most abundant element in the universe,medium
+HYDROXIDE,An ion consisting of one oxygen and one hydrogen atom,medium
+INDICATOR,A substance changing color to show the pH of a solution,medium
+ION,An atom or molecule carrying an electric charge,easy
+IONIC,A bond formed by electrostatic attraction between opposite ions,medium
+ISOMER,A molecule sharing the same formula but a different structure,medium
+ISOTOPE,An atom of the same element with a different number of neutrons,medium
+KINETICS,The study of the rates at which chemical reactions proceed,hard
+LIQUID,A state of matter with definite volume but no fixed shape,easy
+LITMUS,A dye turning red in acid and blue in base,easy
+MASS,The quantity of matter in an object measured in grams,easy
+MENISCUS,The curved surface of a liquid in a narrow tube,medium
+MIXTURE,Two or more substances combined but not chemically joined,easy
+MOLAR,The mass in grams of one mole of a substance,medium
+MOLE,The unit representing 6.022 times ten to the twenty-third particles,easy
+MOLECULE,Two or more atoms chemically bonded to form the smallest unit of a compound,medium
+NEUTRON,A neutral subatomic particle found in the nucleus,medium
+NOBLE,A group of chemically unreactive gases such as helium and argon,easy
+NUCLEUS,The dense central core of an atom containing protons and neutrons,medium
+ORBITAL,A region of space where an electron is likely to be found,medium
+ORGANIC,Describing compounds based on chains or rings of carbon atoms,medium
+OXIDATION,A reaction involving the loss of electrons or gain of oxygen,medium
+PERIODIC,The table arranging all known elements by atomic number,medium
+PHOTON,A quantum of electromagnetic energy with no mass,medium
+POLYMER,A large molecule made of repeating smaller molecular units,medium
+PRECIPITATE,An insoluble solid forming from a reaction in solution,medium
+PROTON,A positively charged particle in the nucleus of an atom,medium
+RADICAL,A species with an unpaired electron making it highly reactive,medium
+REACTANT,A starting material consumed during a chemical reaction,medium
+REDUCTION,A reaction involving the gain of electrons or loss of oxygen,medium
+SOLID,A state of matter with definite shape and volume,easy
+SOLUBILITY,The maximum amount of solute that dissolves in a solvent at a given temperature,hard
+SOLUTE,A substance dissolved in a solvent to form a solution,medium
+SOLUTION,A homogeneous mixture of a solute uniformly distributed in a solvent,medium
+SOLVENT,The substance in which a solute dissolves,medium
+SUBLIMATION,The transition of a substance directly from solid to gas,hard
+VALENCE,The number of bonds an atom can form with other atoms,medium
+YIELD,The amount of product obtained from a chemical reaction,easy

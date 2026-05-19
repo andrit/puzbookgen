@@ -1,0 +1,88 @@
+word,clue,difficulty
+AERIAL,A map or photograph taken from directly above a location,medium
+ALTITUDE,The height of a point above a reference level such as sea level,medium
+ARCHIPELAGO,A chain or cluster of islands,hard
+ATLAS,A bound collection of maps covering a region or the entire world,easy
+AZIMUTHAL,A projection centered on a single point showing true direction,hard
+BASIN,A depression draining water toward a central point,easy
+BEARING,A direction expressed in degrees measured clockwise from north,medium
+BENCH,A surveying reference point with a precisely known elevation,easy
+CANYON,A deep narrow valley with steep sides carved by a river,easy
+CAPE,A narrow point of land projecting into a body of water,easy
+CARTOGRAPHY,The art and science of making maps,hard
+CHOROPLETH,A map using color shading to show data variation by region,hard
+COAST,The land immediately bordering the sea,easy
+COMPASS,An instrument showing cardinal directions using a magnetized needle,easy
+CONTOUR,A line on a topographic map connecting points of equal elevation,medium
+COORDINATE,A pair of values locating a point on a map or globe,medium
+CREST,The highest point of a ridge or hill,easy
+DATUM,A reference level from which elevations or depths are measured,medium
+DECLINATION,The angle between magnetic north and true geographic north,hard
+DELTA,A fan-shaped landform where a river deposits sediment at its mouth,easy
+DEPRESSION,A hollow in the earth's surface lower than the surrounding land,medium
+DESERT,A region receiving less than 250 millimeters of rainfall annually,easy
+DIVIDE,A ridge of high ground separating two drainage systems,easy
+ELEVATION,The vertical distance above sea level,medium
+EQUATOR,The great circle equidistant from the poles dividing the hemispheres,medium
+ESTUARY,The tidal mouth of a river where freshwater meets the sea,medium
+FJORD,A long narrow sea inlet between steep cliffs carved by glaciation,medium
+FLOODPLAIN,The flat low area adjacent to a river prone to periodic flooding,medium
+GEOID,The true shape of the earth defined by mean sea level,medium
+GEODESY,The science measuring the shape size and gravitational field of Earth,hard
+GLACIER,A slow-moving river of ice carving valleys and depositing material,medium
+GLOBE,A spherical model accurately representing the entire surface of Earth,easy
+GRADIENT,The rate of elevation change along a slope,medium
+GRATICULE,The network of parallels and meridians on a map,hard
+GULF,A large inlet of ocean partially enclosed by land,easy
+HEMISPHERE,One half of the earth divided by the equator or a meridian,medium
+HIGHLAND,An elevated area of land above the surrounding terrain,easy
+HYPSOMETRIC,A map using color gradations to represent elevation ranges,hard
+INLET,A narrow body of water extending inland from a larger water body,easy
+ISLAND,A landmass surrounded by water smaller than a continent,easy
+ISTHMUS,A narrow strip of land connecting two larger land areas,medium
+LATITUDE,An angular measurement north or south of the equator,medium
+LEGEND,A key explaining the symbols and colors used on a map,easy
+LONGITUDE,An angular measurement east or west of the prime meridian,medium
+LOWLAND,A relatively flat area of land at low elevation,easy
+MARSH,A low-lying wetland area dominated by herbaceous plants,easy
+MERIDIAN,A line of longitude running from pole to pole,medium
+MESA,A flat-topped elevated landform with steep sides,easy
+MOUNTAIN,An elevated landform rising significantly above its surroundings,easy
+NADIR,The point on the ground directly below an aircraft or satellite,medium
+NORTH,The direction toward the geographic north pole,easy
+OBLIQUE,A map projection tilted at an angle rather than centered on a pole,medium
+OCEAN,One of the five named saltwater bodies covering most of Earth,easy
+ORTHOPHOTO,A geometrically corrected aerial image used as a map base,hard
+OUTCROP,Exposed bedrock visible at the surface,medium
+PARALLEL,A line of latitude running horizontally around the globe,medium
+PENINSULA,A piece of land projecting into water surrounded on three sides,medium
+PLAIN,A broad flat area of land with few prominent features,easy
+PLATEAU,A large area of flat elevated land,medium
+PLUMB,A weighted string showing a true vertical line in surveying,easy
+POINT,A unit of measurement representing one thousandth of an inch on a map,easy
+POLAR,Relating to or centered on the geographic poles,medium
+PRIME,The zero-degree meridian passing through Greenwich England,easy
+PROJECTION,A method of representing the curved earth on a flat surface,medium
+RELIEF,The variation in elevation and landform across a landscape,easy
+REMOTE,Gathering information about Earth's surface from aircraft or satellites,medium
+RHUMBE,A constant compass bearing line crossing all meridians at the same angle,hard
+RIDGE,A long narrow elevated landform with sloping sides,easy
+RIVER,A natural flowing watercourse draining toward a sea lake or other river,easy
+SCALE,The ratio between map distance and actual ground distance,easy
+SEA,A large body of saline water smaller than an ocean,easy
+SLOPE,The incline of the land measured as rise over run,easy
+SOUND,A wide inlet or channel of water connecting two larger bodies,easy
+SOURCE,The origin point of a river or stream,easy
+SUMMIT,The highest point of a mountain or hill,easy
+SWAMP,A permanently waterlogged area dominated by trees and shrubs,easy
+SYMBOL,A graphic sign on a map representing a real-world feature,easy
+TERRACE,A flat elevated strip of land bordering a river or coast,medium
+TOPOGRAPHY,The detailed description and mapping of natural landforms,hard
+TRIBUTARY,A smaller river or stream flowing into a larger one,medium
+TUNDRA,A flat treeless biome with frozen subsoil,medium
+VALLEY,An elongated depression between ranges of hills or mountains,easy
+VECTOR,A map data format representing features as geometric shapes,medium
+VERTICAL,The scale on a cross-section or elevation diagram,medium
+WATERSHED,The total area draining into a single river system,medium
+WETLAND,Land that is saturated with water either permanently or seasonally,medium
+ZONE,A division of the earth by climate latitude or land use,easy

@@ -1,0 +1,78 @@
+word,clue,difficulty
+ADAPTATION,A trait evolved to improve survival in a specific environment,hard
+AMPHIBIAN,A vertebrate living both in water and on land,medium
+ARACHNID,An eight-legged invertebrate including spiders and scorpions,medium
+ARTHROPOD,An invertebrate with an exoskeleton and jointed limbs,medium
+BIOLUMINESCENCE,Light produced by a living organism for signaling or luring prey,hard
+BIOME,A large ecological community defined by its climate and organisms,medium
+CAMOUFLAGE,Coloring or patterning that blends an animal into its background,hard
+CARNIVORE,An animal feeding primarily on the flesh of other animals,medium
+CEPHALOPOD,A class of mollusks including squid octopus and cuttlefish,hard
+CETACEAN,A marine mammal including whales dolphins and porpoises,hard
+CHRYSALIS,The protective casing enclosing a butterfly during metamorphosis,medium
+CLASSIFICATION,The systematic grouping of organisms into hierarchical categories,hard
+CLUTCH,A group of eggs laid at the same time by one animal,easy
+COLONY,A group of animals of the same species living and cooperating together,medium
+COMMENSALISM,A relationship where one organism benefits and the other is unaffected,hard
+CONVERGENT,Evolution producing similar traits in unrelated species,medium
+COURTSHIP,Behavioral displays performed to attract a mate,medium
+CRUSTACEAN,An arthropod with a hard exoskeleton including crabs and lobsters,hard
+CRYPSIS,The ability to avoid detection by blending into the environment,medium
+DIURNAL,Active primarily during daylight hours,medium
+DORSAL,Relating to the back or upper surface of an animal,medium
+ECHOLOCATION,Navigating and hunting using reflected sound waves,hard
+ECHINODERM,A spiny-skinned marine animal including starfish and sea urchins,hard
+ECOSYSTEM,A community of organisms interacting with their physical environment,hard
+ECTOTHERM,An animal whose body temperature is regulated by its environment,hard
+ENDOTHERM,An animal that generates its own body heat internally,hard
+ESTIVATION,A period of dormancy during hot or dry conditions,hard
+EXOSKELETON,A hard outer covering providing structure and protection,hard
+EXTINCTION,The permanent disappearance of every member of a species,medium
+FAUNA,The animal life characteristic of a particular region,easy
+FLEDGLING,A young bird that has recently grown flight feathers,medium
+FOOD,A chain showing the transfer of energy through eating relationships,easy
+FORAGING,Searching for and collecting food in the wild,medium
+GENUS,The taxonomic rank above species and below family,medium
+GESTATION,The period of development inside the womb before birth,medium
+HABITAT,The natural environment where an organism lives and thrives,medium
+HERBIVORE,An animal that feeds exclusively on plant material,medium
+HIBERNATE,To enter a state of deep reduced-metabolism dormancy in winter,medium
+HIERARCHY,A ranked social structure with dominant and subordinate members,medium
+HIVE,A colony structure housing thousands of social insects,easy
+HOST,An organism providing food and shelter to a parasite,easy
+IMPRINTING,A learning process where a young animal bonds to the first moving object it sees,hard
+INSTINCT,An innate unlearned behavioral response to a stimulus,medium
+INSTAR,A developmental stage between molts in an insect's life,medium
+INVERTEBRATE,An animal lacking a vertebral column or backbone,hard
+LARVA,The juvenile feeding stage of an insect before metamorphosis,easy
+MAMMAL,A warm-blooded vertebrate that nurses young with milk,easy
+MARSUPIAL,A mammal carrying and nursing young in an external pouch,medium
+METAMORPHOSIS,A dramatic transformation in body form during development,hard
+MIGRATION,Seasonal movement between breeding and feeding grounds,medium
+MOLLUSK,A soft-bodied invertebrate often protected by a shell,medium
+MONOTREME,An egg-laying mammal such as the platypus or echidna,hard
+MUTUALISM,A relationship where both organisms benefit from the interaction,hard
+NICHE,The role and position an organism occupies in its ecosystem,easy
+NOCTURNAL,Active primarily during the hours of darkness,medium
+OMNIVORE,An animal consuming both plant and animal matter,medium
+ORDER,A taxonomic rank grouping related families together,easy
+PARASITE,An organism living and feeding at the expense of a host,medium
+PHEROMONE,A chemical signal released to influence others of the same species,hard
+PHYLUM,A major taxonomic division below kingdom,medium
+PLUMAGE,The covering of feathers on a bird,medium
+PREDATOR,An animal that hunts and kills other animals for food,medium
+PREY,An animal hunted and eaten by another,easy
+PRIMATE,A mammal order including monkeys apes and humans,medium
+PROBOSCIS,An elongated flexible snout or nose used for feeding,medium
+RAPTOR,A bird of prey hunting with talons such as an eagle or hawk,medium
+REPTILE,A cold-blooded vertebrate including snakes lizards and turtles,medium
+RODENT,A small gnawing mammal with continuously growing incisors,medium
+RUMINANT,A mammal that chews the cud such as cattle deer and sheep,medium
+SCAVENGER,An animal feeding on dead or decaying organic material,medium
+SCHOOL,A large group of fish swimming together,easy
+SPECIES,The fundamental unit of biological classification,medium
+SYMBIOSIS,A close long-term relationship between two different organisms,hard
+TAXONOMY,The science of classifying and naming living organisms,hard
+TERRITORY,An area defended by an animal against intruders of the same species,medium
+VENOM,A toxic substance injected through a bite sting or spine,easy
+VERTEBRATE,An animal possessing a backbone or spinal column,medium

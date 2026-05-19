@@ -3,7 +3,12 @@
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "dist",
-    "baseUrl": "../.."
+    "baseUrl": "../..",
+    "paths": {
+      "@puzzle-book/word-generator": [
+        "../../packages/word-generator/src/index.ts"
+      ]
+    }
   },
   "include": [
     "src"

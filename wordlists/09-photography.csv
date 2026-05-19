@@ -1,0 +1,81 @@
+word,clue,difficulty
+AMBIENT,Existing natural light in a scene not added by the photographer,medium
+APERTURE,The opening in a lens controlling how much light enters the camera,medium
+ASPECT,The ratio of an image's width to its height,medium
+BACKLIGHT,Light positioned behind the subject creating a rim or glow effect,medium
+BOKEH,The aesthetic quality of the out-of-focus areas in a photograph,medium
+BRACKET,To shoot the same frame at multiple exposures for safety,medium
+BULB,A shutter mode keeping the shutter open for as long as the button is held,easy
+CANDID,A photograph taken without the subject's awareness or preparation,medium
+CHIAROSCURO,The use of strong contrasts between light and dark in composition,hard
+CHROMATIC,Color fringing at the edges of objects caused by lens aberration,medium
+CLIPPING,Losing detail in the brightest or darkest areas of an exposure,medium
+COLOR,The overall tint or shade dominating an image's light quality,easy
+COMPOSITION,The deliberate arrangement of elements within the frame,hard
+CONTRAST,The difference between the lightest and darkest tones in an image,medium
+CROP,To remove the outer edges of an image to improve framing,easy
+DARKROOM,A light-proof space for developing film and printing photographs,medium
+DEPTH,The range within a scene that appears acceptably sharp,easy
+DIFFUSER,A material softening and spreading harsh light,medium
+DODGING,A darkroom technique lightening specific areas of a print,medium
+DSLR,A digital camera using a mirror to reflect light to an optical viewfinder,easy
+DYNAMIC,The range of tones from the darkest shadow to the brightest highlight,medium
+EXPOSURE,The total amount of light reaching the sensor or film,medium
+FILL,Light added to reduce shadows on the darker side of a subject,easy
+FILM,A light-sensitive strip coated with silver halides for recording images,easy
+FILTER,A transparent element placed before the lens to modify light,easy
+FIXED,A prime lens with a single focal length that cannot zoom,easy
+FLARE,Light scattering inside the lens causing haze or artifacts,easy
+FOCAL,The distance from the lens to the point where parallel rays converge,medium
+FOCUS,The state of sharpness at a specific distance from the lens,easy
+FORMAT,The physical size of the film or sensor used in a camera,easy
+FRAME,The boundaries of the image defining what is included in the shot,easy
+GRAIN,The visible texture in film photographs from silver halide crystals,easy
+HAND,Holding the camera without a tripod using body as stabilization,easy
+HIGH,An image key dominated by bright tones suggesting lightness,easy
+HISTOGRAM,A graph showing the distribution of tones in a digital image,medium
+HOOD,A cylindrical shade attached to the front of a lens to block stray light,easy
+HYPERFOCAL,The closest focus distance at which depth of field extends to infinity,hard
+ISO,The camera sensor's sensitivity to light expressed as a number,easy
+KELVIN,The unit measuring color temperature of light sources,medium
+LATITUDE,The range of exposures within which film or sensor captures detail,medium
+LENS,The optical element refracting light to form an image,easy
+LIGHT,The source of illumination shaping and defining a photographic subject,easy
+LONG,An exposure lasting several seconds or more to capture motion,easy
+LOW,An image key dominated by dark tones suggesting weight or drama,easy
+MACRO,A close-up photography mode reproducing subjects at life size,easy
+MASK,A digital or physical tool blocking light from specific areas,easy
+MATRIX,A metering mode evaluating light across the entire frame,medium
+MIRRORLESS,A camera type with no optical viewfinder mirror system,hard
+NEGATIVE,A processed film image where tones are reversed light for dark,medium
+NOISE,Digital interference appearing as grain or colored specks in shadows,easy
+NORMAL,A lens with a focal length approximating human field of view,easy
+OVEREXPOSE,To allow too much light causing washed-out highlights,medium
+PANORAMA,A wide-format image capturing a broad horizontal scene,medium
+PARALLAX,The difference in viewing angle between a lens and a separate viewfinder,medium
+PIXEL,The smallest unit of a digital image,easy
+POLARIZER,A filter reducing glare and reflections on surfaces and water,medium
+PORTRAIT,A photograph centered on capturing a person's face and expression,medium
+PRIME,A fixed focal length lens offering maximum optical quality,easy
+PRINT,A physical photograph transferred from film or digital to paper,easy
+PROCESS,The chemical treatment of film to reveal a latent image,medium
+RANGEFINDER,A camera using a split-image system for manual focus,medium
+RAW,An uncompressed file format capturing all sensor data for editing,easy
+RECIPROCITY,The inverse relationship between aperture and shutter speed,hard
+REFLECTOR,A panel bouncing light onto a subject to fill shadows,medium
+RULE,A compositional guideline dividing a frame into thirds,easy
+SENSOR,The digital device capturing light and converting it to an image,medium
+SHUTTER,The mechanism controlling how long the sensor is exposed to light,medium
+SILHOUETTE,A dark subject shape against a much brighter background,medium
+SINGLE,A focus mode locking focus when the shutter button is half-pressed,easy
+SOFTBOX,A light modifier diffusing a flash or studio strobe,medium
+SPEED,The duration of time the shutter remains open during an exposure,easy
+SPOT,A metering mode reading only a small central area of the frame,easy
+TELEPHOTO,A long focal length lens bringing distant subjects closer,medium
+TONAL,The range of brightness values from the darkest to lightest areas,medium
+TRIPOD,A three-legged camera support providing stability for slow shutter speeds,medium
+TUNGSTEN,A warm yellow-orange color temperature from incandescent bulbs,medium
+VIGNETTE,Darkening of the image corners relative to the center,medium
+WHITE,A camera setting adjusting color balance to match the light source,medium
+WIDE,A short focal length lens capturing a broad angle of view,easy
+ZOOM,A variable focal length lens allowing magnification adjustment,easy

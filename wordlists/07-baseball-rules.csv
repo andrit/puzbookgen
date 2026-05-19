@@ -1,0 +1,75 @@
+word,clue,difficulty
+ADVANCE,Moving to the next base after a hit or wild pitch,medium
+APPEAL,A fielder's request for an umpire to rule on a specific play,medium
+AT,A plate appearance that may result in a hit or out,easy
+BALK,An illegal pitching motion awarding all runners one base,easy
+BALL,A pitch outside the strike zone not swung at,easy
+BASE,One of four corners runners must touch in order to score,easy
+BASERUNNER,A batter who has safely reached and occupies a base,hard
+BATTER,The player currently at the plate attempting to hit,easy
+BENCH,The dugout area where players sit when not on the field,easy
+BOBBLE,Mishandling a fielded ball before recording the out,medium
+BUNT,A tap of the ball just past the infield without a full swing,easy
+CATCHER,The fielder who crouches behind home plate to receive pitches,medium
+CHANGE,An off-speed pitch designed to look like a fastball,easy
+CLEANUP,The fourth spot in the batting order assigned to a power hitter,medium
+CLOSER,A relief pitcher who specializes in preserving leads in the ninth,medium
+COUNT,The current total of balls and strikes on the batter,easy
+CURVEBALL,A pitch that breaks downward and to the side,medium
+CYCLE,Hitting a single double triple and home run in one game,easy
+DEAD,A ball temporarily out of play following an umpire stoppage,easy
+DEFENSE,The team in the field attempting to record outs,easy
+DESIGNATED,A batter who hits in place of the pitcher in the lineup,medium
+DIAMOND,The infield area bounded by the four bases,easy
+DOUBLE,A hit allowing the batter to safely reach second base,easy
+DOUBLEHEADER,Two complete games played between the same teams on one day,hard
+EARNED,A run charged to the pitcher because of hits rather than errors,easy
+ERROR,A misplay allowing a batter or runner to advance,easy
+EXTRA,An inning added when the score remains tied after nine,easy
+FAIR,A batted ball landing within the foul lines,easy
+FASTBALL,The primary pitch thrown at maximum velocity,medium
+FIELDER,Any defensive player positioned on the field,medium
+FORCE,An out situation where a runner must advance to the next base,easy
+FOUL,A ball hit outside the two boundary lines,easy
+FULL,A pitch count of three balls and two strikes,easy
+GROUNDBALL,A batted ball rolling or bouncing along the infield,medium
+GROUNDER,A ball hit sharply along the ground toward the infield,medium
+HIT,Safely reaching base on a batted ball without an error,easy
+HOMEPLATE,The five-sided white rubber slab where batters stand,medium
+HOMERUN,A hit allowing the batter to circle all bases and score,medium
+INFIELD,The area of the diamond covered by the four infielders,medium
+INNING,One unit of play consisting of three outs for each team,easy
+INTENTIONAL,A deliberate four-pitch walk issued to avoid facing a batter,hard
+INTERFERENCE,Illegally obstructing a fielder or baserunner's path,hard
+LEADOFF,The first batter of an inning or the first hitter in the lineup,medium
+LINEUP,The ordered list of nine batters a manager submits before the game,medium
+MOUND,The raised dirt area in the center of the diamond where pitchers throw,easy
+OBSTRUCTION,A fielder's illegal impedance of a runner's progress,hard
+OUTFIELD,The area of grass beyond the infield covered by three players,medium
+PICKOFF,A throw from pitcher or catcher to catch a runner off a base,medium
+PITCH,A ball thrown by the pitcher toward home plate,easy
+PITCHOUT,A deliberate ball thrown wide to allow the catcher to throw out a runner,medium
+POPUP,A high fly ball easily caught by an infielder,medium
+PUTOUT,A fielder's act of recording an out by catching or touching,medium
+RELIEF,A pitcher who enters the game to replace the starting pitcher,medium
+ROSIN,A powdery grip substance pitchers apply to their hands,easy
+ROTATION,The set of starting pitchers used in an ordered schedule,medium
+RUNDOWN,A fielding situation where a runner is trapped between two bases,medium
+SACRIFICE,A bunt or fly intended to advance a runner at the batter's expense,medium
+SAFE,A ruling that a runner has reached a base before the tag,easy
+SHUTOUT,A game in which the winning team holds the opponent scoreless,medium
+SINGLE,A hit allowing the batter to safely reach first base,easy
+SLIDER,A breaking ball moving laterally away from the batter,easy
+SQUEEZE,A play where the runner on third breaks for home on the pitch,medium
+STEAL,Advancing to the next base while the pitcher is throwing,easy
+STRIKEZONE,The area over home plate between the knees and lettered chest,medium
+STRIKEOUT,Recording three strikes on a batter to end the at-bat,medium
+SUBMARINE,A pitching delivery releasing the ball from below the hip,medium
+SWING,The batter's attempt to hit the pitched ball,easy
+TAG,Touching a runner with the ball to record an out,easy
+TRIPLE,A hit allowing the batter to safely reach third base,medium
+TWOSEAM,A sinker pitch with slight armside run,medium
+UMPIRE,An official who rules on plays and enforces the rules,easy
+WALK,Four balls resulting in the batter being awarded first base,easy
+WARMUP,Preparatory pitches thrown before an inning or new pitcher,medium
+WINDUP,A pitching delivery using a full leg kick and arm rotation,medium

@@ -317,6 +317,113 @@ export const trimGrid = (
   return { trimmedMap, trimmedWidth, trimmedHeight }
 }
 
+
+// ---------------------------------------------------------------------------
+// Step 7c — Remove internal blank rows and columns
+// ---------------------------------------------------------------------------
+
+/**
+ * Removes any interior row or column that is entirely blocked (all black).
+ *
+ * After trimming the outer border, the layout library sometimes leaves
+ * blank rows/columns between word groups — wide empty bands that waste
+ * grid space and produce a visually sparse result. This step removes them,
+ * collapsing the grid without altering any word positions relative to each other.
+ *
+ * Only fully-blocked interior rows/cols are removed. The first and last
+ * rows/cols are kept regardless (they are the bounding edge from trimGrid).
+ *
+ * @pure
+ */
+/**
+ * Compacts the grid by removing runs of fully-blocked rows or columns.
+ *
+ * Strategy: scan rows top-to-bottom. Any row containing at least one letter
+ * cell is "active". A blocked row is only kept if it sits between two active
+ * rows with no gap — i.e., it is a separator row inside a connected cluster,
+ * not a dead zone between disconnected word groups.
+ *
+ * Concretely: we keep a row if the nearest active row above it AND the nearest
+ * active row below it are both within MAX_GAP rows. This preserves the single
+ * blank rows that separate parallel words in the same cluster but collapses
+ * the large empty bands between disconnected word groups.
+ *
+ * The same logic applies to columns independently.
+ */
+const MAX_GAP = 1  // max consecutive blank rows/cols to keep between active rows/cols
+
+export const compactGrid = (
+  cellMap: Map<CellKey, Cell>,
+  width: number,
+  height: number
+): { compactedMap: Map<CellKey, Cell>; compactedWidth: number; compactedHeight: number } => {
+  // ── 1. Find active rows and cols (contain ≥1 letter) ─────────────────────
+  const activeRows = new Set<number>()
+  const activeCols = new Set<number>()
+
+  for (const cell of cellMap.values()) {
+    if (cell.type === 'letter') {
+      activeRows.add(cell.row)
+      activeCols.add(cell.col)
+    }
+  }
+
+  if (activeRows.size === 0) {
+    return { compactedMap: cellMap, compactedWidth: width, compactedHeight: height }
+  }
+
+  // ── 2. Determine which rows to keep ──────────────────────────────────────
+  // A blank row is kept only if both its nearest active neighbour above
+  // AND nearest active neighbour below are within MAX_GAP steps.
+  const keepRow = (r: number): boolean => {
+    if (activeRows.has(r)) return true
+    // Find nearest active row above and below
+    let distAbove = Infinity, distBelow = Infinity
+    for (const ar of activeRows) {
+      if (ar < r) distAbove = Math.min(distAbove, r - ar)
+      if (ar > r) distBelow = Math.min(distBelow, ar - r)
+    }
+    return distAbove <= MAX_GAP && distBelow <= MAX_GAP
+  }
+
+  const keepCol = (c: number): boolean => {
+    if (activeCols.has(c)) return true
+    let distLeft = Infinity, distRight = Infinity
+    for (const ac of activeCols) {
+      if (ac < c) distLeft  = Math.min(distLeft,  c - ac)
+      if (ac > c) distRight = Math.min(distRight, ac - c)
+    }
+    return distLeft <= MAX_GAP && distRight <= MAX_GAP
+  }
+
+  // ── 3. Build compacted index maps ─────────────────────────────────────────
+  const rowMap: number[] = [], colMap: number[] = []
+  for (let r = 0; r < height; r++) if (keepRow(r)) rowMap.push(r)
+  for (let c = 0; c < width;  c++) if (keepCol(c)) colMap.push(c)
+
+  const rowIdx = new Map(rowMap.map((r, i) => [r, i]))
+  const colIdx = new Map(colMap.map((c, i) => [c, i]))
+
+  // ── 4. Rebuild cell map with remapped indices ─────────────────────────────
+  const compactedHeight = rowMap.length
+  const compactedWidth  = colMap.length
+  const compactedMap    = new Map<CellKey, Cell>()
+
+  for (const [oldR, newR] of rowIdx) {
+    for (const [oldC, newC] of colIdx) {
+      const cell = cellMap.get(`${oldR},${oldC}`)
+      const newKey = `${newR},${newC}`
+      if (cell) {
+        compactedMap.set(newKey, { ...cell, row: newR, col: newC })
+      } else {
+        compactedMap.set(newKey, { row: newR, col: newC, type: 'blocked', number: null, solution: null })
+      }
+    }
+  }
+
+  return { compactedMap, compactedWidth, compactedHeight }
+}
+
 // ---------------------------------------------------------------------------
 // Composition — full pipeline as a single pure function
 // ---------------------------------------------------------------------------
@@ -351,8 +458,11 @@ export const buildCrosswordGridAndClues = (
   // Trim empty border rows/columns produced by the layout library
   const { trimmedMap, trimmedWidth, trimmedHeight } = trimGrid(numberedCellMap, width, height)
 
+  // Remove interior blank rows/cols to compact the grid
+  const { compactedMap, compactedWidth, compactedHeight } = compactGrid(trimmedMap, trimmedWidth, trimmedHeight)
+
   return {
-    grid: buildGrid(trimmedMap, trimmedWidth, trimmedHeight),
+    grid: buildGrid(compactedMap, compactedWidth, compactedHeight),
     clues: buildClueArrays(placedWords, numberMap),
   }
 }

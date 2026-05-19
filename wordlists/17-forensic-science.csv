@@ -1,0 +1,92 @@
+word,clue,difficulty
+ADIPOCERE,A waxy substance formed from body fat during decomposition,hard
+ALIBI,Evidence placing a suspect elsewhere at the time of a crime,medium
+ALLELE,One of two or more versions of a gene used in DNA profiling,medium
+ANALYSIS,The systematic examination of evidence to draw conclusions,medium
+ANTHROPOLOGY,The forensic science of identifying individuals from skeletal remains,hard
+ARSON,The criminal act of deliberately setting a fire,easy
+AUTOPSY,A medical examination of a body to determine cause of death,medium
+BALLISTICS,The forensic science of firearms projectiles and wound patterns,medium
+BITE,A mark left in skin used to compare with a suspect's dental pattern,easy
+BLOOD,The pattern of drops stains and spatter revealing events at a scene,easy
+BLOWFLY,An insect colonizing remains early and used to estimate time of death,medium
+BORE,The internal diameter of a gun barrel leaving marks on projectiles,easy
+BOTANY,The forensic use of plant material as evidence,medium
+CADAVER,A human corpse used for examination or research,medium
+CALIBER,The diameter of a firearm's barrel or bullet,medium
+CAST,A plaster or silicone impression made from a footprint or tire track,easy
+CHAIN,The documented sequence of who handled evidence from scene to court,easy
+CHROMATOGRAPHY,A technique separating a mixture's components for chemical analysis,hard
+CLASS,Evidence characteristics common to a group rather than unique,easy
+COLLECTION,The careful gathering of evidence from a crime scene,medium
+COMPARISON,Examining two samples side by side to determine if they share an origin,medium
+CONTAMINATION,The introduction of foreign material that compromises evidence,hard
+CORPUS,Proof that a crime actually occurred before identifying a perpetrator,medium
+CRIME,The controlled location where evidence from an incident is preserved,easy
+CRIMINALIST,A scientist analyzing physical evidence in a forensic laboratory,hard
+CROSS,Examination by the opposing attorney challenging witness testimony,medium
+DECOMPOSITION,The biological breakdown of a body after death,hard
+DEDUCTION,Drawing a specific conclusion from a set of observed facts,medium
+DEFENSE,Wounds on the arms or hands sustained while blocking an attack,easy
+DENTAL,Records used to identify remains by matching teeth to records,medium
+DIATOM,A microscopic algae used to establish if a drowning occurred,medium
+DIGITAL,Evidence extracted from computers phones and electronic storage,medium
+DNA,The genetic material providing the most specific biological identification,easy
+DOCUMENT,A questioned writing or printing examined for authenticity,easy
+ELECTROPHORESIS,A technique separating DNA fragments by size using electrical current,hard
+ENTOMOLOGY,The study of insects to help establish time of death,hard
+EVIDENCE,Any physical trace establishing facts relevant to a legal case,medium
+EXEMPLAR,A known standard sample used for comparison with questioned material,medium
+EXPERT,A qualified specialist giving technical testimony in a court case,easy
+FACIAL,Computer or artist reconstruction of appearance from skeletal remains,medium
+FIBER,A microscopic thread transferred between people or objects at contact,easy
+FINGERPRINT,A friction ridge impression uniquely identifying an individual,medium
+FIREARMS,Weapons discharging projectiles using explosive propellant force,medium
+FOOTWEAR,A sole impression left at a scene that can be matched to a shoe,medium
+FORENSIC,Relating to the application of scientific methods to legal questions,medium
+FORGERY,The fraudulent copying or alteration of a document or signature,medium
+FRAGMENTATION,The breakup of a projectile or object on impact,hard
+GLASS,Fragments transferring between a perpetrator and scene on impact,easy
+GUNSHOT,Residue left on hands or clothing after a firearm is discharged,medium
+HAIR,A trace evidence type examined for color structure and DNA,easy
+HANDWRITING,The individual characteristics of a person's written script,medium
+HOMICIDE,The killing of one person by another,medium
+IMPRESSION,An indented mark made in a soft surface by an object or foot,medium
+INCENDIARY,A device or substance deliberately used to start a fire,medium
+INDENTATION,A mark left on paper beneath a written document,medium
+INFRARED,A light spectrum used to reveal latent writing or alterations,medium
+INKANALYSIS,The chemical examination of pen ink to determine its age or origin,hard
+JURIES,Groups of citizens deciding verdicts based on evidence presented,easy
+LATENT,A hidden fingerprint not immediately visible without development,medium
+LIGATURE,A cord or tie used to restrain or strangle,medium
+LIVIDITY,The pooling and discoloration of blood after death indicating position,medium
+LOCARD,The principle stating every contact leaves a trace,medium
+LUMINOL,A chemical reagent revealing traces of blood invisible to the naked eye,medium
+MASS,Spectrometry identifying unknown substances by molecular weight,easy
+MEDICAL,An official appointed to investigate sudden or unexplained deaths,medium
+MICROANALYSIS,The forensic examination of trace evidence at microscopic scale,hard
+MITOCHONDRIAL,A type of DNA analysis tracing maternal lineage,hard
+MODUS,A criminal's characteristic pattern of committing offenses,medium
+ODONTOLOGY,The forensic science of dental identification,hard
+PATHOLOGY,The medical science examining disease and injury in deceased persons,hard
+PHOTOGRAPH,A visual record documenting a crime scene before evidence is moved,medium
+POLLEN,Microscopic plant particles useful for placing people at specific locations,medium
+POLYGRAPHY,An instrument measuring physiological responses during questioning,hard
+POSTMORTEM,A medical examination conducted after death,medium
+PRESUMPTIVE,A preliminary field test suggesting the presence of a substance,hard
+PROJECTILE,A fired object whose path and impact reveal information,medium
+RIGOR,The temporary stiffening of muscles after death,easy
+SEROLOGY,The examination of blood and other bodily fluids,medium
+SOIL,Trace evidence transferred on footwear linking a suspect to a location,easy
+SPECTROSCOPY,Analysis identifying materials by how they interact with light,hard
+STIPPLING,Gunpowder particles embedded in skin indicating a close-range shot,medium
+SUICIDE,A death determined to be self-inflicted during investigation,medium
+SWAB,A cotton-tipped tool collecting biological or chemical trace material,easy
+TESTIMONY,A witness statement given under oath in a legal proceeding,medium
+TITER,The measured concentration of antibodies or substances in a sample,medium
+TOOLMARK,An impression made by a tool that can be matched to the implement,medium
+TRACE,Minute material transferred between people objects and environments,easy
+TOXICOLOGY,The analysis of poisons and drugs in biological samples,hard
+TRAJECTORY,The path a projectile travels from firearm to final impact,medium
+ULTRAVIOLET,Light used to reveal fluids stains and document alterations,medium
+VOID,An area in a bloodstain pattern where an object was positioned,easy

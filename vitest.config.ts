@@ -47,6 +47,7 @@ export default defineConfig({
       '@puzzle-book/content-db': resolve(__dirname, 'packages/content-db/src/index.ts'),
       // Test fixture alias — avoids fragile relative paths across package boundaries
       '@puzzle-book/test-fixtures': resolve(__dirname, 'packages/shared/src/__fixtures__/fixtures.ts'),
+      '@puzzle-book/word-generator': resolve(__dirname, 'packages/word-generator/src/index.ts'),
     },
   },
 })
